@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Portifolio-my-page</title>
 </head>
+
 <body>
 
     <div class="particulas"></div>
@@ -31,8 +32,13 @@
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                Sou um profissional de suporte técnico apaixonado por tecnologia, sempre buscando evoluir e entender como as coisas funcionam por trás das telas. Atuo no atendimento e resolução de problemas de TI, trabalhando diretamente com usuários, dispositivos, redes e sistemas. Tenho experiência prática em diagnóstico, manutenção e configuração de equipamentos, além de interesse crescente em desenvolvimento — especialmente com Java e tecnologias web.
-                Gosto de aprender na prática, testar soluções e encontrar formas mais eficientes de fazer as coisas. Estou sempre estudando, me atualizando e explorando novas áreas da tecnologia para ampliar minhas habilidades e crescer profissionalmente dentro do ambiente de TI.
+                Sou um profissional de suporte técnico apaixonado por tecnologia, sempre buscando evoluir e entender como as
+                coisas funcionam por trás das telas. Atuo no atendimento e resolução de problemas de TI, trabalhando diretamente
+                com usuários, dispositivos, redes e sistemas. Tenho experiência prática em diagnóstico, manutenção e configuração
+                de equipamentos, além de interesse crescente em desenvolvimento — especialmente com Java e tecnologias web.
+                Gosto de aprender na prática, testar soluções e encontrar formas mais eficientes de fazer as coisas. Estou sempre
+                estudando, me atualizando e explorando novas áreas da tecnologia para ampliar minhas habilidades e crescer
+                profissionalmente dentro do ambiente de TI.
             </p>
         </div>
     </section>
@@ -71,28 +77,87 @@
 
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em contato</h2>
-        
-        <form class="formulario-contato" id="formulario">
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="grupo-form">
                 <input 
-                    type="text" 
-                    placeholder="Seu nome" 
-                    class="campo-form" 
-                    required>
+                    type="text"
+                    placeholder="Seu nome"
+                    class="campo-form"
+                    id="nome"
+                    required
+                >
             </div>
 
             <div class="grupo-form">
-                <textarea 
-                    class="campo-form" 
+                <textarea
+                    class="campo-form"
                     placeholder="Digite sua mensagem"
-                    required></textarea>
+                    rows="5"
+                    id="mensagem"
+                    required
+                ></textarea>
             </div>
 
-            <button type="submit" class="botao-form">
-                Enviar Mensagem
-            </button>
+            <button type="submit" class="botao-form">Enviar Mensagem</button>
         </form>
     </section>
+
+<div class="social">
+
+    <div class="social-item">
+        <a href="https://github.com/Rafajames" target="_blank">
+            <img src="./img/github.svg" alt="GitHub" class="icon-social">
+        </a>
+        <p>GitHub</p>
+    </div>
+
+    <div class="social-item">
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="./img/linkedin.svg" alt="LinkedIn" class="icon-social">
+        </a>
+        <p>LinkedIn</p>
+    </div>
+
+</div>
+
+<p class="copy">© 2025 Rafajames — Todos os direitos reservados.</p>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5583987392336';
+
+            const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            window.open(url, '_blank');
+
+            console.log(url);
+        }
+    </script>
+
+    <script>
+        // Detecta automaticamente o tema do sistema
+        function aplicarTemaSistema() {
+            const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            if (darkMode) {
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.remove("dark");
+            }
+        }
+
+        aplicarTemaSistema();
+
+        window.matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", aplicarTemaSistema);
+    </script>
 
 </body>
 </html>
