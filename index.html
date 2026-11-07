@@ -6,367 +6,440 @@
     <meta name="description" content="Portfólio de Jamerson Rafael: Analista de Field Service e desenvolvedor web. Projetos MapTec-TJRR, ShapePuzzle, Seu Assistente e AuditDesk.">
     <meta property="og:title" content="Jamerson Rafael | Portfólio">
     <meta property="og:description" content="Suporte de TI e desenvolvimento web. Conheça meus projetos.">
+    <meta name="theme-color" content="#0e1116">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap">
     <link rel="stylesheet" href="styles.css">
     <title>Jamerson Rafael | Portfólio</title>
+    <script>
+        // Aplica o tema salvo antes de desenhar a página (evita "piscar")
+        try {
+            const tema = localStorage.getItem('tema');
+            if (tema) document.documentElement.dataset.theme = tema;
+        } catch (e) {}
+    </script>
 </head>
 
 <body>
 
-    <div class="particulas"></div>
+    <a href="#conteudo" class="pular">Pular para o conteúdo</a>
 
-    <nav class="navegacao">
-        <a href="#inicio" class="logo" aria-label="Voltar ao início">&lt;JR/&gt;</a>
-        <ul class="menu">
-            <li><a href="#sobre" class="menu-link">Sobre</a></li>
-            <li><a href="#stack" class="menu-link">Stack</a></li>
-            <li><a href="#projetos" class="menu-link">Projetos</a></li>
-            <li><a href="#contatos" class="menu-link">Contato</a></li>
-        </ul>
-    </nav>
+    <!-- ===================== MENU ===================== -->
+    <header class="topo">
+        <div class="topo-interno">
+            <a href="#inicio" class="logo" aria-label="Voltar ao início">&lt;JR<span>/</span>&gt;</a>
 
-    <main id="inicio" class="cabecalho">
-        <img src="./img/G5zJcAsbkAElaOx.jpg" alt="Foto de perfil de Jamerson Rafael" class="foto-perfil">
-        <p class="saudacao">Olá, eu sou</p>
-        <h1>Jamerson Rafael</h1>
-        <p class="cabecalho-sub-titulo"><span class="prompt">&gt;</span> Analista de Field Service &amp; Desenvolvedor web<span class="cursor" aria-hidden="true">_</span></p>
-        <p class="cabecalho-resumo">
-            Resolvo problemas de TI no dia a dia e transformo os que se repetem em ferramentas web
-            simples de usar.
-        </p>
-        <div class="cabecalho-acoes">
-            <a href="#projetos" class="botao botao-primario">Ver projetos</a>
-            <a href="https://www.linkedin.com/in/jamerson-rafael-a7a480249/" target="_blank" rel="noopener" class="botao botao-secundario">LinkedIn</a>
-            <a href="https://github.com/Rafajames" target="_blank" rel="noopener" class="botao botao-secundario">GitHub</a>
+            <nav id="menu" class="menu" aria-label="Seções">
+                <a href="#sobre" class="menu-link">sobre</a>
+                <a href="#projetos" class="menu-link">projetos</a>
+                <a href="#trajetoria" class="menu-link">trajetória</a>
+                <a href="#contato" class="menu-link">contato</a>
+            </nav>
+
+            <div class="topo-acoes">
+                <button type="button" id="botao-tema" class="botao-icone" aria-label="Alternar tema claro e escuro">
+                    <svg class="icone-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icone-lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button type="button" id="botao-menu" class="botao-icone botao-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
         </div>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- ===================== INÍCIO ===================== -->
+        <section id="inicio" class="inicio">
+            <div class="container inicio-grade">
+                <div class="inicio-texto">
+                    <p class="etiqueta"><span class="ponto-status" aria-hidden="true"></span> Aberto a novas conexões</p>
+                    <h1>Jamerson Rafael</h1>
+                    <p class="inicio-cargo"><span class="prompt">$</span> Analista de Field Service <span class="sep">&amp;</span> Desenvolvedor web<span class="cursor" aria-hidden="true">▍</span></p>
+                    <p class="inicio-resumo">
+                        Resolvo problemas de TI no dia a dia e transformo os que se repetem em ferramentas web
+                        simples, que funcionam no celular e até sem internet.
+                    </p>
+                    <div class="acoes">
+                        <a href="#projetos" class="botao botao-primario">Ver projetos</a>
+                        <a href="#contato" class="botao botao-secundario">Falar comigo</a>
+                    </div>
+                    <ul class="links-rapidos">
+                        <li><a href="https://github.com/Rafajames" target="_blank" rel="noopener">github.com/Rafajames ↗</a></li>
+                        <li><a href="https://www.linkedin.com/in/jamerson-rafael-a7a480249/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+                    </ul>
+                </div>
+
+                <div class="inicio-foto">
+                    <img src="./img/G5zJcAsbkAElaOx.jpg" alt="Foto de perfil de Jamerson Rafael" class="foto-perfil" width="320" height="320">
+                    <span class="selo-foto" aria-hidden="true">~/jamerson</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SOBRE ===================== -->
+        <section id="sobre" class="secao">
+            <div class="container">
+                <header class="secao-cabecalho">
+                    <p class="secao-rotulo">// sobre mim</p>
+                    <h2>Do suporte ao código</h2>
+                </header>
+
+                <div class="sobre-grade">
+                    <div class="sobre-historia">
+                        <p class="sobre-destaque">
+                            Trabalho com suporte técnico atendendo pessoas, equipamentos, redes e sistemas. Foi no campo,
+                            resolvendo os mesmos problemas várias vezes, que comecei a programar.
+                        </p>
+                        <p>
+                            Minha rotina é diagnosticar, consertar e configurar. Com o tempo percebi que boa parte das
+                            dificuldades se repete: encontrar uma sala em um prédio grande, registrar um atendimento,
+                            revisar a qualidade do que foi feito. Em vez de aceitar o retrabalho, passei a criar ferramentas
+                            para resolver isso, para mim e para os colegas.
+                        </p>
+                        <p>
+                            Comecei com Java e hoje desenvolvo principalmente para a web. Gosto de aprender na prática, testar
+                            soluções e entregar algo que as pessoas usem de verdade.
+                        </p>
+
+                        <ul class="principios">
+                            <li>
+                                <h3>Simples para quem usa</h3>
+                                <p>Faço sistemas para quem não é da área técnica. Se precisa de manual, ainda não está pronto.</p>
+                            </li>
+                            <li>
+                                <h3>Funciona em qualquer lugar</h3>
+                                <p>Celular, computador, com ou sem internet. No campo nem sempre tem sinal.</p>
+                            </li>
+                            <li>
+                                <h3>Nasce de um problema real</h3>
+                                <p>Cada projeto começa numa dor do trabalho e melhora com o retorno de quem usa.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="sobre-lateral">
+                        <div class="editor" aria-label="Ficha resumida">
+                            <div class="editor-aba" aria-hidden="true">
+                                <span class="editor-bolinhas"><i></i><i></i><i></i></span>
+                                <span class="editor-nome">sobre.json</span>
+                            </div>
+<pre class="editor-codigo"><code><span class="c-p">{</span>
+  <span class="c-k">"nome"</span>: <span class="c-s">"Jamerson Rafael"</span>,
+  <span class="c-k">"cargo"</span>: <span class="c-s">"Analista de Field Service"</span>,
+  <span class="c-k">"onde"</span>: <span class="c-s">"TI do TJ de Roraima"</span>,
+  <span class="c-k">"pais"</span>: <span class="c-s">"Brasil"</span>,
+  <span class="c-k">"programando_desde"</span>: <span class="c-n">2023</span>,
+  <span class="c-k">"aberto_a_conversas"</span>: <span class="c-b">true</span>
+<span class="c-p">}</span></code></pre>
+                        </div>
+
+                        <div class="habilidades">
+                            <h3 class="habilidades-titulo">Habilidades</h3>
+                            <dl>
+                                <div>
+                                    <dt>Front-end</dt>
+                                    <dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>PWA</li><li>Ionic</li></ul></dd>
+                                </div>
+                                <div>
+                                    <dt>Back-end e dados</dt>
+                                    <dd><ul class="tags"><li>Java</li><li>Spring Boot</li><li>Python</li><li>Flask</li><li>SQLite</li><li>Firebase</li><li>IndexedDB</li></ul></dd>
+                                </div>
+                                <div>
+                                    <dt>Ferramentas</dt>
+                                    <dd><ul class="tags"><li>Git</li><li>GitHub Actions</li><li>GitHub Pages</li><li>Android (APK)</li><li>API Gemini</li></ul></dd>
+                                </div>
+                                <div>
+                                    <dt>Suporte de TI</dt>
+                                    <dd><ul class="tags"><li>Atendimento</li><li>Diagnóstico</li><li>Redes</li><li>Manutenção</li><li>Configuração</li></ul></dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJETOS ===================== -->
+        <section id="projetos" class="secao secao-alternada">
+            <div class="container">
+                <header class="secao-cabecalho">
+                    <p class="secao-rotulo">// projetos</p>
+                    <h2>O que eu construí</h2>
+                    <p class="secao-intro">Ferramentas que uso no trabalho e projetos pessoais que viraram produto.</p>
+                </header>
+
+                <div class="projetos">
+
+                    <!-- MapTec-TJRR -->
+                    <article class="projeto projeto-destaque">
+                        <div class="projeto-capa capa-azul" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="40" y="30" width="110" height="120" rx="8" class="s-linha"/>
+                                <rect x="170" y="30" width="110" height="55" rx="8" class="s-linha"/>
+                                <rect x="170" y="95" width="110" height="55" rx="8" class="s-linha"/>
+                                <rect x="54" y="44" width="36" height="28" rx="4" class="s-sala"/>
+                                <rect x="100" y="44" width="36" height="28" rx="4" class="s-sala"/>
+                                <rect x="54" y="82" width="82" height="54" rx="4" class="s-sala"/>
+                                <rect x="184" y="44" width="38" height="28" rx="4" class="s-sala"/>
+                                <rect x="230" y="44" width="36" height="28" rx="4" class="s-sala-ativa"/>
+                                <rect x="184" y="108" width="82" height="28" rx="4" class="s-sala"/>
+                                <path d="M248 20c-9 0-15 7-15 15 0 11 15 25 15 25s15-14 15-25c0-8-6-15-15-15z" class="s-pino"/>
+                                <circle cx="248" cy="35" r="5" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status status-ok">em uso</span><span>2026</span></div>
+                            <h3>MapTec-TJRR</h3>
+                            <p class="projeto-problema"><strong>Problema:</strong> encontrar a sala certa em cinco prédios grandes do tribunal.</p>
+                            <p>Mapa interativo para técnicos de campo, com busca de salas, navegação por andar e bloco, cores por prédio e funcionamento offline.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Offline</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/MapTec-TJRR/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Ver online ↗</a>
+                                <a href="https://github.com/Rafajames/MapTec-TJRR" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ShapePuzzle -->
+                    <article class="projeto projeto-destaque">
+                        <div class="projeto-capa capa-ambar" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="95" y="25" width="130" height="130" rx="10" class="s-tracejado"/>
+                                <path d="M105 35h55v55h-55z" fill="#f59e0b"/>
+                                <path d="M160 35h55v27.5h-27.5v27.5h-27.5z" fill="#ea580c"/>
+                                <path d="M105 90h27.5v55h-27.5z" fill="#84cc16"/>
+                                <path d="M132.5 90h82.5v27.5h-55v27.5h-27.5z" fill="#0ea5e9"/>
+                                <path d="M240 60h27.5v27.5h27.5v27.5h-55z" fill="#8b5cf6" transform="rotate(12 268 88)"/>
+                                <path d="M30 70h40v40h-40z" fill="#ea580c" transform="rotate(-14 50 90)"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status status-ok">no ar</span><span>2026</span></div>
+                            <h3>ShapePuzzle</h3>
+                            <p class="projeto-problema"><strong>Começo:</strong> um jogo em Java que só rodava no computador.</p>
+                            <p>Virou jogo web instalável com fases infinitas, campeonatos online e offline por QR code, temas com música gerada por código e vários idiomas.</p>
+                            <ul class="tags"><li>JavaScript</li><li>Firebase</li><li>PWA</li><li>Android</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/ShapePuzzle/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Jogar ↗</a>
+                                <a href="https://github.com/Rafajames/ShapePuzzle" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Seu Assistente -->
+                    <article class="projeto">
+                        <div class="projeto-capa capa-rosa" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="110" y="14" width="100" height="152" rx="16" class="s-celular"/>
+                                <rect x="122" y="32" width="76" height="8" rx="4" class="s-trilho"/>
+                                <rect x="122" y="32" width="50" height="8" rx="4" fill="#ec4899"/>
+                                <rect x="122" y="52" width="76" height="20" rx="6" class="s-item"/>
+                                <rect x="122" y="78" width="76" height="20" rx="6" class="s-item"/>
+                                <rect x="122" y="104" width="76" height="20" rx="6" class="s-item"/>
+                                <path d="M128 62l4 4 7-8M128 88l4 4 7-8" class="s-check"/>
+                                <circle cx="128" cy="114" r="4" class="s-aberto"/>
+                                <circle cx="160" cy="146" r="10" fill="#ec4899"/>
+                                <rect x="157" y="140" width="6" height="9" rx="3" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em desenvolvimento</span><span>2026</span></div>
+                            <h3>Seu Assistente</h3>
+                            <p>Tarefas e diário com entrada por voz, lembretes, rotinas por dia da semana, gamificação e modo foco. Roda no navegador e como app Android.</p>
+                            <ul class="tags"><li>JavaScript</li><li>PWA</li><li>GitHub Actions</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://github.com/Rafajames/seu-assistente" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- AuditDesk -->
+                    <article class="projeto">
+                        <div class="projeto-capa capa-verde" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <line x1="60" y1="145" x2="260" y2="145" class="s-linha"/>
+                                <rect x="80" y="95" width="26" height="50" rx="4" fill="#10b981" opacity=".6"/>
+                                <rect x="120" y="70" width="26" height="75" rx="4" fill="#3b82f6" opacity=".6"/>
+                                <rect x="160" y="105" width="26" height="40" rx="4" fill="#10b981" opacity=".6"/>
+                                <rect x="200" y="55" width="26" height="90" rx="4" fill="#3b82f6" opacity=".6"/>
+                                <circle cx="222" cy="58" r="26" fill="none" stroke="#10b981" stroke-width="5"/>
+                                <line x1="241" y1="77" x2="262" y2="98" stroke="#10b981" stroke-width="7" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status status-ok">em uso</span><span>2026</span></div>
+                            <h3>AuditDesk</h3>
+                            <p>Registro de chamados e auditoria da qualidade do atendimento com IA: relatórios, gráfico de temas e comparação de períodos, com dados anonimizados.</p>
+                            <ul class="tags"><li>JavaScript</li><li>IndexedDB</li><li>API Gemini</li></ul>
+                            <div class="projeto-links">
+                                <span class="aviso-privado">🔒 Projeto interno, código fechado</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TRAJETÓRIA ===================== -->
+        <section id="trajetoria" class="secao">
+            <div class="container">
+                <header class="secao-cabecalho">
+                    <p class="secao-rotulo">// trajetória</p>
+                    <h2>Como cheguei até aqui</h2>
+                </header>
+
+                <ol class="linha-tempo">
+                    <li>
+                        <span class="ano">2023</span>
+                        <div class="evento">
+                            <h3>Primeiros passos com Java e Web</h3>
+                            <p>Lógica, orientação a objetos e páginas web. Primeiro sistema próprio: o
+                                <a href="https://github.com/Rafajames/Sistema-de-Gerenciamento-de-Servi-os-T-cnicos" target="_blank" rel="noopener">Gerenciamento de Serviços Técnicos</a>,
+                                com clientes, técnicos e solicitações em Java.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ano">2024</span>
+                        <div class="evento">
+                            <h3>Primeiro app mobile</h3>
+                            <p><a href="https://github.com/Rafajames/Boa_Vista_Gourmet" target="_blank" rel="noopener">Boa Vista Gourmet</a>,
+                                app em Ionic para levantamento de restaurantes em Boa Vista.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ano">2025</span>
+                        <div class="evento">
+                            <h3>Jogos, Spring Boot e TypeScript</h3>
+                            <p><a href="https://github.com/Rafajames/Navinha" target="_blank" rel="noopener">Navinha</a>, jogo 2D em Java Swing;
+                                <a href="https://github.com/Rafajames/cadastro-usuario" target="_blank" rel="noopener">Cadastro de Usuários</a> com Spring Boot e MVC;
+                                e <a href="https://github.com/Rafajames/Envio-chamados-externos" target="_blank" rel="noopener">Envio de Chamados Externos</a>,
+                                interface em TypeScript para gerenciar o envio de técnicos.</p>
+                        </div>
+                    </li>
+                    <li class="atual">
+                        <span class="ano">2026</span>
+                        <div class="evento">
+                            <h3>Ferramentas em produção</h3>
+                            <p>MapTec-TJRR e AuditDesk passam a apoiar o trabalho de campo. O ShapePuzzle ganha campeonatos e versão
+                                Android, e o Seu Assistente ganha APK gerado automaticamente.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===================== CONTATO ===================== -->
+        <section id="contato" class="secao secao-alternada">
+            <div class="container contato-grade">
+                <div class="contato-texto">
+                    <p class="secao-rotulo">// contato</p>
+                    <h2>Vamos conversar?</h2>
+                    <p>Tem um projeto, uma vaga ou uma ideia? Escreva aqui e a mensagem chega direto no meu WhatsApp.</p>
+                    <ul class="canais">
+                        <li>
+                            <a href="https://www.linkedin.com/in/jamerson-rafael-a7a480249/" target="_blank" rel="noopener">
+                                <img src="./img/linkedin.svg" alt="" class="canal-icone">
+                                <span><strong>LinkedIn</strong><small>jamerson-rafael</small></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Rafajames" target="_blank" rel="noopener">
+                                <img src="./img/github.svg" alt="" class="canal-icone icone-mono">
+                                <span><strong>GitHub</strong><small>Rafajames</small></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="formulario" id="formulario" novalidate>
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" autocomplete="name" placeholder="Como posso te chamar?" required>
+                        <p class="erro" id="erro-nome" hidden>Escreva seu nome.</p>
+                    </div>
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="5" placeholder="Conte o que você precisa" required></textarea>
+                        <p class="erro" id="erro-mensagem" hidden>Escreva uma mensagem.</p>
+                    </div>
+                    <button type="submit" class="botao botao-primario botao-largo">Enviar pelo WhatsApp</button>
+                    <p class="formulario-nota">Abre o WhatsApp com a mensagem pronta. Você revisa antes de enviar.</p>
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <!-- ===================== SOBRE ===================== -->
-    <section id="sobre" class="sobre">
-        <h2 class="secao-titulo"><span class="hash">#</span> Sobre mim</h2>
-
-        <div class="sobre-grade">
-            <div class="terminal" role="group" aria-label="Resumo">
-                <div class="terminal-topo" aria-hidden="true">
-                    <span></span><span></span><span></span>
-                    <em>~/jamerson</em>
-                </div>
-                <pre class="terminal-corpo"><span class="t-cmd">$ whoami</span>
-<span class="t-chave">nome</span>     Jamerson Rafael
-<span class="t-chave">cargo</span>    Analista de Field Service
-<span class="t-chave">onde</span>     TI do Tribunal de
-         Justiça de Roraima
-<span class="t-chave">foco</span>     ferramentas web para quem
-         atende e é atendido
-<span class="t-chave">stack</span>    JavaScript · Java · TypeScript
-<span class="t-cmd">$</span> <span class="cursor">_</span></pre>
-            </div>
-
-            <div class="sobre-textos">
-                <p>
-                    Sou um profissional de suporte técnico apaixonado por tecnologia, sempre buscando entender como as coisas
-                    funcionam por trás das telas. Atuo no atendimento e resolução de problemas de TI, trabalhando diretamente
-                    com usuários, dispositivos, redes e sistemas, com experiência prática em diagnóstico, manutenção e
-                    configuração de equipamentos.
-                </p>
-                <p>
-                    No campo, percebi que muitos problemas se repetem. Foi assim que comecei a programar: criando ferramentas
-                    para resolver o que eu e meus colegas enfrentamos todos os dias, como encontrar uma sala em um prédio
-                    grande ou registrar e revisar atendimentos.
-                </p>
-                <p>
-                    Comecei com Java e hoje desenvolvo principalmente para a web. Gosto de aprender na prática, testar soluções
-                    e encontrar formas mais eficientes de fazer as coisas.
-                </p>
-            </div>
+    <footer class="rodape">
+        <div class="container rodape-interno">
+            <p>© <span id="ano">2026</span> Jamerson Rafael</p>
+            <p class="rodape-feito">feito com HTML, CSS e JavaScript puro</p>
+            <a href="#inicio" class="voltar-topo">voltar ao topo ↑</a>
         </div>
-
-        <h3 class="sub-titulo">Como eu trabalho</h3>
-        <ul class="principios">
-            <li>
-                <strong>Simples para quem usa</strong>
-                <span>Meus sistemas são feitos para pessoas que não são da área técnica. Se precisa de manual, ainda não está pronto.</span>
-            </li>
-            <li>
-                <strong>Funciona em qualquer lugar</strong>
-                <span>Celular, computador, com ou sem internet. Técnico de campo nem sempre tem sinal.</span>
-            </li>
-            <li>
-                <strong>Feito a partir do problema real</strong>
-                <span>Cada projeto nasceu de uma dor do trabalho ou do dia a dia, e evolui com o retorno de quem usa.</span>
-            </li>
-        </ul>
-    </section>
-
-    <!-- ===================== STACK ===================== -->
-    <section id="stack" class="stack">
-        <h2 class="secao-titulo"><span class="hash">#</span> Habilidades</h2>
-
-        <div class="stack-grade">
-            <div class="stack-grupo">
-                <h3>Front-end</h3>
-                <ul class="tags">
-                    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>PWA</li><li>Ionic</li>
-                </ul>
-            </div>
-            <div class="stack-grupo">
-                <h3>Back-end e dados</h3>
-                <ul class="tags">
-                    <li>Java</li><li>Spring Boot</li><li>Python</li><li>Flask</li><li>SQLite</li><li>Firebase</li><li>IndexedDB</li>
-                </ul>
-            </div>
-            <div class="stack-grupo">
-                <h3>Ferramentas</h3>
-                <ul class="tags">
-                    <li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>GitHub Pages</li><li>Android (APK)</li><li>API Gemini</li>
-                </ul>
-            </div>
-            <div class="stack-grupo">
-                <h3>Suporte de TI</h3>
-                <ul class="tags">
-                    <li>Atendimento ao usuário</li><li>Diagnóstico</li><li>Redes</li><li>Manutenção</li><li>Configuração de equipamentos</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== PROJETOS ===================== -->
-    <section id="projetos" class="projetos">
-        <h2 class="secao-titulo"><span class="hash">#</span> Meus Projetos</h2>
-
-        <div class="projetos-caixa">
-
-            <!-- MapTec-TJRR -->
-            <article class="projetos-card">
-                <div class="projetos-capa capa-maptec" aria-hidden="true">
-                    <svg viewBox="0 0 320 180">
-                        <rect x="40" y="30" width="110" height="120" rx="8" class="c-linha"/>
-                        <rect x="170" y="30" width="110" height="55" rx="8" class="c-linha"/>
-                        <rect x="170" y="95" width="110" height="55" rx="8" class="c-linha"/>
-                        <rect x="54" y="44" width="36" height="28" rx="4" class="c-sala"/>
-                        <rect x="100" y="44" width="36" height="28" rx="4" class="c-sala"/>
-                        <rect x="54" y="82" width="82" height="54" rx="4" class="c-sala"/>
-                        <rect x="184" y="44" width="38" height="28" rx="4" class="c-sala"/>
-                        <rect x="230" y="44" width="36" height="28" rx="4" class="c-sala c-destaque"/>
-                        <rect x="184" y="108" width="82" height="28" rx="4" class="c-sala"/>
-                        <path d="M248 20c-9 0-15 7-15 15 0 11 15 25 15 25s15-14 15-25c0-8-6-15-15-15z" class="c-pino"/>
-                        <circle cx="248" cy="35" r="5" fill="#fff"/>
-                    </svg>
-                </div>
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">MapTec-TJRR</h3>
-                    <p class="paragrafo-projetos">
-                        Mapa interativo para técnicos de campo encontrarem salas em cinco prédios do Tribunal de Justiça de
-                        Roraima. Busca de salas, navegação por andar e bloco, cores por prédio e funcionamento offline.
-                    </p>
-                    <ul class="tags">
-                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Offline</li>
-                    </ul>
-                    <div class="projetos-links">
-                        <a href="https://rafajames.github.io/MapTec-TJRR/" target="_blank" rel="noopener" class="link-projeto">Ver online</a>
-                        <a href="https://github.com/Rafajames/MapTec-TJRR" target="_blank" rel="noopener" class="link-projeto link-codigo">Código</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- ShapePuzzle -->
-            <article class="projetos-card">
-                <div class="projetos-capa capa-shape" aria-hidden="true">
-                    <svg viewBox="0 0 320 180">
-                        <g class="c-grade">
-                            <rect x="95" y="25" width="130" height="130" rx="10"/>
-                        </g>
-                        <path d="M105 35h55v55h-55z" class="c-p1"/>
-                        <path d="M160 35h55v27.5h-27.5v27.5h-27.5z" class="c-p2"/>
-                        <path d="M105 90h27.5v55h-27.5z" class="c-p3"/>
-                        <path d="M132.5 90h82.5v27.5h-55v27.5h-27.5z" class="c-p4"/>
-                        <path d="M240 60h27.5v27.5h27.5v27.5h-55z" class="c-p5 c-solta"/>
-                        <path d="M30 70h40v40h-40z" class="c-p2 c-solta2"/>
-                    </svg>
-                </div>
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">ShapePuzzle</h3>
-                    <p class="paragrafo-projetos">
-                        Jogo de quebra-cabeça de formas que nasceu em Java e virou jogo web instalável. Fases infinitas,
-                        campeonatos online e offline por QR code, temas com música gerada por código e vários idiomas.
-                    </p>
-                    <ul class="tags">
-                        <li>JavaScript</li><li>Firebase</li><li>PWA</li><li>Android</li>
-                    </ul>
-                    <div class="projetos-links">
-                        <a href="https://rafajames.github.io/ShapePuzzle/" target="_blank" rel="noopener" class="link-projeto">Jogar</a>
-                        <a href="https://github.com/Rafajames/ShapePuzzle" target="_blank" rel="noopener" class="link-projeto link-codigo">Código</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Seu Assistente -->
-            <article class="projetos-card">
-                <div class="projetos-capa capa-assistente" aria-hidden="true">
-                    <svg viewBox="0 0 320 180">
-                        <rect x="110" y="14" width="100" height="152" rx="16" class="c-celular"/>
-                        <rect x="122" y="32" width="76" height="8" rx="4" class="c-barra"/>
-                        <rect x="122" y="32" width="50" height="8" rx="4" class="c-progresso"/>
-                        <g class="c-tarefa">
-                            <rect x="122" y="52" width="76" height="20" rx="6"/>
-                            <rect x="122" y="78" width="76" height="20" rx="6"/>
-                            <rect x="122" y="104" width="76" height="20" rx="6"/>
-                        </g>
-                        <path d="M128 62l4 4 7-8" class="c-check"/>
-                        <path d="M128 88l4 4 7-8" class="c-check"/>
-                        <circle cx="128" cy="114" r="4" class="c-aberto"/>
-                        <circle cx="160" cy="146" r="10" class="c-mic"/>
-                        <rect x="157" y="140" width="6" height="9" rx="3" fill="#fff"/>
-                    </svg>
-                </div>
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Seu Assistente</h3>
-                    <p class="paragrafo-projetos">
-                        Gerenciador de tarefas e diário com entrada por voz, lembretes, rotinas por dia da semana,
-                        gamificação e modo foco. Funciona no navegador e como app Android gerado pelo GitHub Actions.
-                    </p>
-                    <ul class="tags">
-                        <li>JavaScript</li><li>PWA</li><li>Android</li><li>GitHub Actions</li>
-                    </ul>
-                    <div class="projetos-links">
-                        <a href="https://github.com/Rafajames/seu-assistente" target="_blank" rel="noopener" class="link-projeto">Código</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- AuditDesk -->
-            <article class="projetos-card">
-                <div class="projetos-capa capa-audit" aria-hidden="true">
-                    <svg viewBox="0 0 320 180">
-                        <line x1="60" y1="145" x2="260" y2="145" class="c-eixo"/>
-                        <rect x="80" y="95" width="26" height="50" rx="4" class="c-b1"/>
-                        <rect x="120" y="70" width="26" height="75" rx="4" class="c-b2"/>
-                        <rect x="160" y="105" width="26" height="40" rx="4" class="c-b1"/>
-                        <rect x="200" y="55" width="26" height="90" rx="4" class="c-b2"/>
-                        <circle cx="222" cy="58" r="26" class="c-lupa"/>
-                        <line x1="241" y1="77" x2="262" y2="98" class="c-cabo"/>
-                    </svg>
-                </div>
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">AuditDesk</h3>
-                    <p class="paragrafo-projetos">
-                        Registro de chamados e auditoria da qualidade do atendimento com IA. Gera relatórios, gráfico de temas
-                        e comparação de períodos, e anonimiza os dados antes de enviar para análise.
-                    </p>
-                    <ul class="tags">
-                        <li>JavaScript</li><li>IndexedDB</li><li>API Gemini</li>
-                    </ul>
-                    <div class="projetos-links">
-                        <span class="link-projeto link-privado">Projeto interno</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- ===================== TRAJETÓRIA ===================== -->
-    <section id="trajetoria" class="trajetoria">
-        <h2 class="secao-titulo"><span class="hash">#</span> Trajetória no código</h2>
-
-        <ol class="linha-tempo">
-            <li>
-                <span class="ano">2023</span>
-                <div class="evento">
-                    <h3>Primeiros passos com Java e Web</h3>
-                    <p>
-                        Estudos de lógica, orientação a objetos e páginas web. Primeiro sistema próprio: o
-                        <a href="https://github.com/Rafajames/Sistema-de-Gerenciamento-de-Servi-os-T-cnicos" target="_blank" rel="noopener">Gerenciamento de Serviços Técnicos</a>,
-                        com clientes, técnicos, atendentes e solicitações em Java.
-                    </p>
-                </div>
-            </li>
-            <li>
-                <span class="ano">2024</span>
-                <div class="evento">
-                    <h3>Primeiro app mobile</h3>
-                    <p>
-                        <a href="https://github.com/Rafajames/Boa_Vista_Gourmet" target="_blank" rel="noopener">Boa Vista Gourmet</a>,
-                        app em Ionic para levantamento de restaurantes em Boa Vista.
-                    </p>
-                </div>
-            </li>
-            <li>
-                <span class="ano">2025</span>
-                <div class="evento">
-                    <h3>Jogos, Spring Boot e TypeScript</h3>
-                    <p>
-                        <a href="https://github.com/Rafajames/Navinha" target="_blank" rel="noopener">Navinha</a>, jogo 2D em Java Swing;
-                        <a href="https://github.com/Rafajames/cadastro-usuario" target="_blank" rel="noopener">Cadastro de Usuários</a>
-                        com Java, Spring Boot e arquitetura MVC; e
-                        <a href="https://github.com/Rafajames/Envio-chamados-externos" target="_blank" rel="noopener">Envio de Chamados Externos</a>,
-                        interface em TypeScript para gerenciar relatórios e o envio de técnicos.
-                    </p>
-                </div>
-            </li>
-            <li>
-                <span class="ano">2026</span>
-                <div class="evento">
-                    <h3>Ferramentas em produção</h3>
-                    <p>
-                        MapTec-TJRR e AuditDesk passam a apoiar o trabalho de campo. O ShapePuzzle vira jogo web com
-                        campeonatos e versão Android, e o Seu Assistente ganha APK gerado automaticamente.
-                    </p>
-                </div>
-            </li>
-        </ol>
-    </section>
-
-    <!-- ===================== CONTATO ===================== -->
-    <section id="contatos" class="contatos">
-        <h2 class="secao-titulo"><span class="hash">#</span> Entre em contato</h2>
-        <p class="contatos-intro">Quer conversar sobre um projeto ou uma oportunidade? Mande uma mensagem.</p>
-
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <label for="nome" class="rotulo">Nome</label>
-                <input type="text" placeholder="Seu nome" class="campo-form" id="nome" required>
-            </div>
-
-            <div class="grupo-form">
-                <label for="mensagem" class="rotulo">Mensagem</label>
-                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="5" id="mensagem" required></textarea>
-            </div>
-
-            <button type="submit" class="botao-form">Enviar pelo WhatsApp</button>
-        </form>
-    </section>
-
-    <footer>
-        <div class="social">
-            <a class="social-item" href="https://github.com/Rafajames" target="_blank" rel="noopener">
-                <img src="./img/github.svg" alt="" class="icon-social">
-                <span>GitHub</span>
-            </a>
-            <a class="social-item" href="https://www.linkedin.com/in/jamerson-rafael-a7a480249/" target="_blank" rel="noopener">
-                <img src="./img/linkedin.svg" alt="" class="icon-social">
-                <span>LinkedIn</span>
-            </a>
-        </div>
-        <p class="copy">© <span id="ano">2026</span> Jamerson Rafael — Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        function enviarWhats(event) {
-            event.preventDefault();
+        // ---------- Ano no rodapé ----------
+        document.getElementById('ano').textContent = new Date().getFullYear();
 
-            const nome = document.getElementById('nome').value.trim();
-            const mensagem = document.getElementById('mensagem').value.trim();
-            const telefone = '5583987392336';
+        // ---------- Tema claro/escuro ----------
+        const raiz = document.documentElement;
+        document.getElementById('botao-tema').addEventListener('click', () => {
+            const escuroAgora = raiz.dataset.theme
+                ? raiz.dataset.theme === 'dark'
+                : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const novo = escuroAgora ? 'light' : 'dark';
+            raiz.dataset.theme = novo;
+            try { localStorage.setItem('tema', novo); } catch (e) {}
+        });
 
-            const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
-            const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
-            window.open(url, '_blank');
+        // ---------- Menu no celular ----------
+        const botaoMenu = document.getElementById('botao-menu');
+        const menu = document.getElementById('menu');
+        function fecharMenu() {
+            menu.classList.remove('aberto');
+            botaoMenu.setAttribute('aria-expanded', 'false');
+        }
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menu.classList.toggle('aberto');
+            botaoMenu.setAttribute('aria-expanded', String(aberto));
+        });
+        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', fecharMenu));
+
+        // ---------- Destaca a seção atual no menu ----------
+        const links = [...menu.querySelectorAll('a')];
+        if ('IntersectionObserver' in window) {
+            const observador = new IntersectionObserver(entradas => {
+                entradas.forEach(entrada => {
+                    if (!entrada.isIntersecting) return;
+                    links.forEach(l => l.classList.toggle('ativo', l.getAttribute('href') === '#' + entrada.target.id));
+                });
+            }, { rootMargin: '-45% 0px -50% 0px' });
+            document.querySelectorAll('main section[id]').forEach(s => observador.observe(s));
         }
 
-        document.getElementById('ano').textContent = new Date().getFullYear();
+        // ---------- Formulário → WhatsApp ----------
+        const telefone = '5583987392336';
+        document.getElementById('formulario').addEventListener('submit', event => {
+            event.preventDefault();
+            const nome = document.getElementById('nome');
+            const mensagem = document.getElementById('mensagem');
+            let valido = true;
+            [[nome, 'erro-nome'], [mensagem, 'erro-mensagem']].forEach(([campo, idErro]) => {
+                const vazio = !campo.value.trim();
+                document.getElementById(idErro).hidden = !vazio;
+                campo.setAttribute('aria-invalid', String(vazio));
+                if (vazio) valido = false;
+            });
+            if (!valido) return;
+
+            const texto = `Olá, Jamerson! Me chamo ${nome.value.trim()}. ${mensagem.value.trim()}`;
+            window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`, '_blank');
+        });
     </script>
 
 </body>
