@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Jamerson Rafael: suporte de TI e desenvolvimento web. Projetos MapTec-TJRR, ShapePuzzle, Seu Assistente e AuditDesk.">
+    <meta name="description" content="Portfólio de Jamerson Rafael: Analista de Field Service e desenvolvedor web. Projetos MapTec-TJRR, ShapePuzzle, Seu Assistente e AuditDesk.">
     <meta property="og:title" content="Jamerson Rafael | Portfólio">
     <meta property="og:description" content="Suporte de TI e desenvolvimento web. Conheça meus projetos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap">
     <link rel="stylesheet" href="styles.css">
     <title>Jamerson Rafael | Portfólio</title>
 </head>
@@ -15,9 +18,10 @@
     <div class="particulas"></div>
 
     <nav class="navegacao">
+        <a href="#inicio" class="logo" aria-label="Voltar ao início">&lt;JR/&gt;</a>
         <ul class="menu">
-            <li><a href="#inicio" class="menu-link">Início</a></li>
             <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#stack" class="menu-link">Stack</a></li>
             <li><a href="#projetos" class="menu-link">Projetos</a></li>
             <li><a href="#contatos" class="menu-link">Contato</a></li>
         </ul>
@@ -25,31 +29,112 @@
 
     <main id="inicio" class="cabecalho">
         <img src="./img/G5zJcAsbkAElaOx.jpg" alt="Foto de perfil de Jamerson Rafael" class="foto-perfil">
+        <p class="saudacao">Olá, eu sou</p>
         <h1>Jamerson Rafael</h1>
-        <p class="cabecalho-sub-titulo">Desenvolvedor de sistemas</p>
+        <p class="cabecalho-sub-titulo"><span class="prompt">&gt;</span> Analista de Field Service &amp; Desenvolvedor web<span class="cursor" aria-hidden="true">_</span></p>
+        <p class="cabecalho-resumo">
+            Resolvo problemas de TI no dia a dia e transformo os que se repetem em ferramentas web
+            simples de usar.
+        </p>
         <div class="cabecalho-acoes">
             <a href="#projetos" class="botao botao-primario">Ver projetos</a>
             <a href="https://www.linkedin.com/in/jamerson-rafael-a7a480249/" target="_blank" rel="noopener" class="botao botao-secundario">LinkedIn</a>
+            <a href="https://github.com/Rafajames" target="_blank" rel="noopener" class="botao botao-secundario">GitHub</a>
         </div>
     </main>
 
+    <!-- ===================== SOBRE ===================== -->
     <section id="sobre" class="sobre">
-        <h2 class="secao-titulo">Sobre mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Sou um profissional de suporte técnico apaixonado por tecnologia, sempre buscando evoluir e entender como as
-                coisas funcionam por trás das telas. Atuo no atendimento e resolução de problemas de TI, trabalhando diretamente
-                com usuários, dispositivos, redes e sistemas. Tenho experiência prática em diagnóstico, manutenção e configuração
-                de equipamentos, além de interesse crescente em desenvolvimento — especialmente com Java e tecnologias web.
-                Gosto de aprender na prática, testar soluções e encontrar formas mais eficientes de fazer as coisas. Estou sempre
-                estudando, me atualizando e explorando novas áreas da tecnologia para ampliar minhas habilidades e crescer
-                profissionalmente dentro do ambiente de TI.
-            </p>
+        <h2 class="secao-titulo"><span class="hash">#</span> Sobre mim</h2>
+
+        <div class="sobre-grade">
+            <div class="terminal" role="group" aria-label="Resumo">
+                <div class="terminal-topo" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                    <em>~/jamerson</em>
+                </div>
+                <pre class="terminal-corpo"><span class="t-cmd">$ whoami</span>
+<span class="t-chave">nome</span>     Jamerson Rafael
+<span class="t-chave">cargo</span>    Analista de Field Service
+<span class="t-chave">onde</span>     TI do Tribunal de
+         Justiça de Roraima
+<span class="t-chave">foco</span>     ferramentas web para quem
+         atende e é atendido
+<span class="t-chave">stack</span>    JavaScript · Java · TypeScript
+<span class="t-cmd">$</span> <span class="cursor">_</span></pre>
+            </div>
+
+            <div class="sobre-textos">
+                <p>
+                    Sou um profissional de suporte técnico apaixonado por tecnologia, sempre buscando entender como as coisas
+                    funcionam por trás das telas. Atuo no atendimento e resolução de problemas de TI, trabalhando diretamente
+                    com usuários, dispositivos, redes e sistemas, com experiência prática em diagnóstico, manutenção e
+                    configuração de equipamentos.
+                </p>
+                <p>
+                    No campo, percebi que muitos problemas se repetem. Foi assim que comecei a programar: criando ferramentas
+                    para resolver o que eu e meus colegas enfrentamos todos os dias, como encontrar uma sala em um prédio
+                    grande ou registrar e revisar atendimentos.
+                </p>
+                <p>
+                    Comecei com Java e hoje desenvolvo principalmente para a web. Gosto de aprender na prática, testar soluções
+                    e encontrar formas mais eficientes de fazer as coisas.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="sub-titulo">Como eu trabalho</h3>
+        <ul class="principios">
+            <li>
+                <strong>Simples para quem usa</strong>
+                <span>Meus sistemas são feitos para pessoas que não são da área técnica. Se precisa de manual, ainda não está pronto.</span>
+            </li>
+            <li>
+                <strong>Funciona em qualquer lugar</strong>
+                <span>Celular, computador, com ou sem internet. Técnico de campo nem sempre tem sinal.</span>
+            </li>
+            <li>
+                <strong>Feito a partir do problema real</strong>
+                <span>Cada projeto nasceu de uma dor do trabalho ou do dia a dia, e evolui com o retorno de quem usa.</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===================== STACK ===================== -->
+    <section id="stack" class="stack">
+        <h2 class="secao-titulo"><span class="hash">#</span> Habilidades</h2>
+
+        <div class="stack-grade">
+            <div class="stack-grupo">
+                <h3>Front-end</h3>
+                <ul class="tags">
+                    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>PWA</li><li>Ionic</li>
+                </ul>
+            </div>
+            <div class="stack-grupo">
+                <h3>Back-end e dados</h3>
+                <ul class="tags">
+                    <li>Java</li><li>Spring Boot</li><li>Python</li><li>Flask</li><li>SQLite</li><li>Firebase</li><li>IndexedDB</li>
+                </ul>
+            </div>
+            <div class="stack-grupo">
+                <h3>Ferramentas</h3>
+                <ul class="tags">
+                    <li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>GitHub Pages</li><li>Android (APK)</li><li>API Gemini</li>
+                </ul>
+            </div>
+            <div class="stack-grupo">
+                <h3>Suporte de TI</h3>
+                <ul class="tags">
+                    <li>Atendimento ao usuário</li><li>Diagnóstico</li><li>Redes</li><li>Manutenção</li><li>Configuração de equipamentos</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <!-- ===================== PROJETOS ===================== -->
     <section id="projetos" class="projetos">
-        <h2 class="secao-titulo">Meus Projetos</h2>
+        <h2 class="secao-titulo"><span class="hash">#</span> Meus Projetos</h2>
 
         <div class="projetos-caixa">
 
@@ -171,7 +256,7 @@
                         e comparação de períodos, e anonimiza os dados antes de enviar para análise.
                     </p>
                     <ul class="tags">
-                        <li>JavaScript</li><li>IndexedDB</li><li>Gemini API</li>
+                        <li>JavaScript</li><li>IndexedDB</li><li>API Gemini</li>
                     </ul>
                     <div class="projetos-links">
                         <span class="link-projeto link-privado">Projeto interno</span>
@@ -180,14 +265,64 @@
             </article>
 
         </div>
-
-        <p class="mais-projetos">
-            Veja todos os repositórios no <a href="https://github.com/Rafajames" target="_blank" rel="noopener">GitHub</a>.
-        </p>
     </section>
 
+    <!-- ===================== TRAJETÓRIA ===================== -->
+    <section id="trajetoria" class="trajetoria">
+        <h2 class="secao-titulo"><span class="hash">#</span> Trajetória no código</h2>
+
+        <ol class="linha-tempo">
+            <li>
+                <span class="ano">2023</span>
+                <div class="evento">
+                    <h3>Primeiros passos com Java e Web</h3>
+                    <p>
+                        Estudos de lógica, orientação a objetos e páginas web. Primeiro sistema próprio: o
+                        <a href="https://github.com/Rafajames/Sistema-de-Gerenciamento-de-Servi-os-T-cnicos" target="_blank" rel="noopener">Gerenciamento de Serviços Técnicos</a>,
+                        com clientes, técnicos, atendentes e solicitações em Java.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <span class="ano">2024</span>
+                <div class="evento">
+                    <h3>Primeiro app mobile</h3>
+                    <p>
+                        <a href="https://github.com/Rafajames/Boa_Vista_Gourmet" target="_blank" rel="noopener">Boa Vista Gourmet</a>,
+                        app em Ionic para levantamento de restaurantes em Boa Vista.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <span class="ano">2025</span>
+                <div class="evento">
+                    <h3>Jogos, Spring Boot e TypeScript</h3>
+                    <p>
+                        <a href="https://github.com/Rafajames/Navinha" target="_blank" rel="noopener">Navinha</a>, jogo 2D em Java Swing;
+                        <a href="https://github.com/Rafajames/cadastro-usuario" target="_blank" rel="noopener">Cadastro de Usuários</a>
+                        com Java, Spring Boot e arquitetura MVC; e
+                        <a href="https://github.com/Rafajames/Envio-chamados-externos" target="_blank" rel="noopener">Envio de Chamados Externos</a>,
+                        interface em TypeScript para gerenciar relatórios e o envio de técnicos.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <span class="ano">2026</span>
+                <div class="evento">
+                    <h3>Ferramentas em produção</h3>
+                    <p>
+                        MapTec-TJRR e AuditDesk passam a apoiar o trabalho de campo. O ShapePuzzle vira jogo web com
+                        campeonatos e versão Android, e o Seu Assistente ganha APK gerado automaticamente.
+                    </p>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
     <section id="contatos" class="contatos">
-        <h2 class="secao-titulo">Entre em contato</h2>
+        <h2 class="secao-titulo"><span class="hash">#</span> Entre em contato</h2>
+        <p class="contatos-intro">Quer conversar sobre um projeto ou uma oportunidade? Mande uma mensagem.</p>
 
         <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="grupo-form">
