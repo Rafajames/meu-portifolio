@@ -653,6 +653,27 @@ h2 {
 .capa-ambar { background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(234, 88, 12, 0.05)); }
 .capa-rosa  { background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(236, 72, 153, 0.04)); }
 .capa-verde { background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.05)); }
+.capa-teal   { background: linear-gradient(135deg, rgba(20, 184, 166, 0.17), rgba(20, 184, 166, 0.04)); }
+.capa-indigo { background: linear-gradient(135deg, rgba(99, 102, 241, 0.17), rgba(168, 85, 247, 0.05)); }
+.capa-espaco { background: linear-gradient(135deg, rgba(30, 41, 99, 0.85), rgba(15, 23, 42, 0.95)); }
+
+.s-onda { fill: none; stroke: #6366f1; stroke-width: 3; stroke-linecap: round; }
+.s-onda-suave { stroke-opacity: 0.4; }
+
+/* Último card ímpar ocupa a linha inteira, para não sobrar um buraco na grade */
+@media (min-width: 721px) {
+    .projeto:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+
+    .projeto:last-child:nth-child(odd) .projeto-capa {
+        flex: 0 0 42%;
+        aspect-ratio: auto;
+        border-bottom: 0;
+        border-right: 1px solid var(--linha);
+    }
+}
 
 .s-linha { fill: none; stroke: var(--texto-suave); stroke-opacity: 0.5; stroke-width: 2; }
 .s-sala { fill: rgba(14, 165, 233, 0.28); }
