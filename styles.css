@@ -619,6 +619,10 @@ h2 {
     gap: 1.5rem;
 }
 
+.projetos.jogos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .projeto {
     display: flex;
     flex-direction: column;
@@ -684,6 +688,8 @@ h2 {
 .s-trilho { fill: var(--linha); }
 .s-item { fill: rgba(236, 72, 153, 0.14); }
 .s-check { fill: none; stroke: #db2777; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.s-peca { fill: var(--superficie); stroke: var(--texto-suave); stroke-opacity: 0.6; stroke-width: 2; }
+.s-ponto { fill: #10b981; }
 .s-aberto { fill: none; stroke: var(--texto-suave); stroke-width: 2; }
 
 .projeto-corpo {
@@ -957,6 +963,10 @@ h2 {
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 880px) {
+    .projetos.jogos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .inicio-grade,
     .sobre-grade,
     .contato-grade {
@@ -979,7 +989,8 @@ h2 {
 }
 
 @media (max-width: 720px) {
-    .projetos {
+    .projetos,
+    .projetos.jogos {
         grid-template-columns: 1fr;
     }
 
@@ -1038,5 +1049,24 @@ h2 {
     *, *::before, *::after {
         animation: none !important;
         transition: none !important;
+    }
+}
+
+/* ---------- Jogos: 3 colunas no desktop ---------- */
+.jogos .projeto .projeto-capa {
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 881px) {
+    .jogos .projeto:last-child:nth-child(odd) {
+        grid-column: auto;
+        flex-direction: column;
+    }
+
+    .jogos .projeto:last-child:nth-child(odd) .projeto-capa {
+        flex: none;
+        aspect-ratio: 16 / 9;
+        border-right: 0;
+        border-bottom: 1px solid var(--linha);
     }
 }
