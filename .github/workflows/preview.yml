@@ -1,0 +1,30 @@
+name: Deploy pull request preview
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: portfolio-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Publish isolated preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .
+          preview-branch: main
+          umbrella-dir: pr-preview
+          wait-for-pages-deployment: true
