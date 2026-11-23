@@ -10,7 +10,8 @@ Este projeto foi criado para apresentar minhas habilidades, experiências e proj
 * **HTML5**
 * **CSS3**
 * **JavaScript**
-* **Dark/Light automático** (segue o tema do sistema)
+* **Tema claro/escuro** (segue o sistema, com botão para trocar)
+* **Elementos [Lucian UX/UI](https://lucianlabs.dev/uxui-prompt/)** (MIT): nome decodificado (#245), filtro de projetos (#271) e cards surgindo ao rolar (#251)
 * **Design responsivo**
 
 ---
@@ -23,25 +24,28 @@ Este portfólio foi desenvolvido com foco em:
 * Interface que se adapta ao tema do dispositivo
 * Seções organizadas para navegação rápida
 * Destaque para habilidades e projetos
-* Formulário de contato funcional (estrutura pronta para backend)
+* Formulário de contato que abre conversa no WhatsApp (sem custo)
 
 ---
 
 ## 📂 Estrutura das Seções
 
 * **Header**: apresentação e links sociais
-* **Sobre mim**: breve descrição profissional
-* **Habilidades**: tecnologias que domino
-* **Projetos**: cards com fotos e descrições
-* **Contato**: formulário limpo e intuitivo
+* **Sobre mim**: breve descrição profissional e habilidades
+* **Projetos**: Ache Aqui TJRR, Ouve, Minha Carteira, Seu Assistente, Potira, Meusom, Diário da Cefaleia e Orquestração Ocupacional, com filtro por área
+* **Jogos**: ShapePuzzle, Hangar Estelar, Passe & Bate, Ateliê e O Caminho das Dez Mil Artes
+* **Trajetória**: linha do tempo
+* **Contato**: formulário que abre o WhatsApp
 * **Footer**: redes sociais e créditos
 
 ---
 
 ## 🔗 Links
 
+* **Site:** [rafajames.github.io/meu-portifolio](https://rafajames.github.io/meu-portifolio/)
+
 * **GitHub:** [https://github.com/Rafajames](https://github.com/Rafajames)
-* **LinkedIn:** [https://www.linkedin.com](https://www.linkedin.com)
+* **LinkedIn:** [jamerson-rafael-a7a480249](https://www.linkedin.com/in/jamerson-rafael-a7a480249/)
 
 ---
 

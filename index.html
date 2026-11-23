@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Jamerson Rafael: Analista de Field Service e desenvolvedor web. Projetos MapTec-TJRR, Minha Carteira, Potira, Seu Assistente, AuditDesk, Meusom e os jogos ShapePuzzle, Navinha e Passe &amp; Bate.">
+    <meta name="description" content="Portfólio de Jamerson Rafael: Analista de Field Service e desenvolvedor web. Projetos Ache Aqui TJRR, Ouve, Minha Carteira, Potira, Diário da Cefaleia, Orquestração Ocupacional, Seu Assistente, Meusom e os jogos ShapePuzzle, Hangar Estelar, Ateliê e Passe &amp; Bate.">
     <meta property="og:title" content="Jamerson Rafael | Portfólio">
     <meta property="og:description" content="Suporte de TI e desenvolvimento web. Conheça meus projetos.">
     <meta name="theme-color" content="#0e1116">
@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-hibrido.css">
+    <link rel="stylesheet" href="lucian.css">
     <title>Jamerson Rafael | Portfólio</title>
     <script>
         // Aplica o tema salvo antes de desenhar a página (evita "piscar")
+        document.documentElement.classList.add('js');
         try {
             const tema = localStorage.getItem('tema');
             if (tema) document.documentElement.dataset.theme = tema;
@@ -57,12 +60,17 @@
             <div class="container inicio-grade">
                 <div class="inicio-texto">
                     <p class="etiqueta"><span class="ponto-status" aria-hidden="true"></span> Aberto a novas conexões</p>
-                    <h1>Jamerson Rafael</h1>
+                    <h1 class="u245-h" id="nome">Jamerson Rafael</h1>
                     <p class="inicio-cargo"><span class="prompt">$</span> Analista de Field Service <span class="sep">&amp;</span> Desenvolvedor web<span class="cursor" aria-hidden="true">▍</span></p>
                     <p class="inicio-resumo">
-                        Resolvo problemas de TI no dia a dia e transformo os que se repetem em ferramentas web
-                        simples, que funcionam no celular e até sem internet.
+                        Atuo no suporte de TI do Tribunal de Justiça de Roraima e desenvolvo as ferramentas que faltavam
+                        no dia a dia: sistemas web simples, que funcionam no celular e até sem internet.
                     </p>
+                    <ul class="numeros" aria-label="Em números">
+                        <li><b data-conta="sistemas">0</b>sistemas</li>
+                        <li><b data-conta="jogos">0</b>jogos</li>
+                        <li><b data-alvo="5">0</b>prédios mapeados</li>
+                    </ul>
                     <div class="acoes">
                         <a href="#projetos" class="botao botao-primario">Ver projetos</a>
                         <a href="#contato" class="botao botao-secundario">Falar comigo</a>
@@ -91,14 +99,13 @@
                 <div class="sobre-grade">
                     <div class="sobre-historia">
                         <p class="sobre-destaque">
-                            Trabalho com suporte técnico atendendo pessoas, equipamentos, redes e sistemas. Foi no campo,
-                            resolvendo os mesmos problemas várias vezes, que comecei a programar.
+                            Atendo pessoas, equipamentos, redes e sistemas na rotina do tribunal. Foi nesse trabalho de campo
+                            que comecei a programar.
                         </p>
                         <p>
-                            Minha rotina é diagnosticar, consertar e configurar. Com o tempo percebi que boa parte das
-                            dificuldades se repete: encontrar uma sala em um prédio grande, registrar um atendimento,
-                            revisar a qualidade do que foi feito. Em vez de aceitar o retrabalho, passei a criar ferramentas
-                            para resolver isso, para mim e para os colegas.
+                            Quando um problema se repete, transformo a solução em ferramenta. O Ache Aqui TJRR ajuda os técnicos
+                            a encontrar salas nos prédios do tribunal; o Ouve transcreve e organiza reuniões e audiências.
+                            Faço isso para mim e para os colegas.
                         </p>
                         <p>
                             Comecei com Java e hoje desenvolvo principalmente para a web. Gosto de aprender na prática, testar
@@ -172,10 +179,11 @@
                     <p class="secao-intro">Ferramentas que uso no trabalho e projetos pessoais que viraram produto.</p>
                 </header>
 
-                <div class="projetos">
+                <div class="u271-cs" role="radiogroup" aria-label="Filtrar projetos"><span class="u271-pl" aria-hidden="true"></span></div>
+                <div class="projetos" id="lista-projetos">
 
-                    <!-- MapTec-TJRR -->
-                    <article class="projeto projeto-destaque">
+                    <!-- Ache Aqui TJRR -->
+                    <article class="projeto projeto-destaque" data-cat="trabalho">
                         <div class="projeto-capa capa-azul" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="40" y="30" width="110" height="120" rx="8" class="s-linha"/>
@@ -193,10 +201,10 @@
                         </div>
                         <div class="projeto-corpo">
                             <div class="projeto-meta"><span class="status status-ok">em uso</span><span>2026</span></div>
-                            <h3>MapTec-TJRR</h3>
+                            <h3>Ache Aqui TJRR</h3>
                             <p class="projeto-problema"><strong>Problema:</strong> encontrar a sala certa em cinco prédios grandes do tribunal.</p>
-                            <p>Mapa interativo para técnicos de campo, com busca de salas, navegação por andar e bloco, cores por prédio e funcionamento offline.</p>
-                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Offline</li></ul>
+                            <p>Antigo MapTec. Guia de salas para técnicos de campo, com fotos e endereços dos prédios, busca, navegação por andar e bloco e área de administração com login Google.</p>
+                            <ul class="tags"><li>JavaScript</li><li>Supabase</li><li>Google Login</li></ul>
                             <div class="projeto-links">
                                 <a href="https://rafajames.github.io/MapTec-TJRR/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Ver online ↗</a>
                                 <a href="https://github.com/Rafajames/MapTec-TJRR" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
@@ -205,7 +213,7 @@
                     </article>
 
                     <!-- Minha Carteira -->
-                    <article class="projeto projeto-destaque">
+                    <article class="projeto projeto-destaque" data-cat="pessoal">
                         <div class="projeto-capa capa-verde" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="70" y="40" width="150" height="100" rx="14" class="s-celular"/>
@@ -232,7 +240,7 @@
                     </article>
 
                     <!-- Seu Assistente -->
-                    <article class="projeto">
+                    <article class="projeto" data-cat="pessoal">
                         <div class="projeto-capa capa-rosa" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="110" y="14" width="100" height="152" rx="16" class="s-celular"/>
@@ -259,32 +267,9 @@
                         </div>
                     </article>
 
-                    <!-- AuditDesk -->
-                    <article class="projeto">
-                        <div class="projeto-capa capa-verde" aria-hidden="true">
-                            <svg viewBox="0 0 320 180">
-                                <line x1="60" y1="145" x2="260" y2="145" class="s-linha"/>
-                                <rect x="80" y="95" width="26" height="50" rx="4" fill="#10b981" opacity=".6"/>
-                                <rect x="120" y="70" width="26" height="75" rx="4" fill="#3b82f6" opacity=".6"/>
-                                <rect x="160" y="105" width="26" height="40" rx="4" fill="#10b981" opacity=".6"/>
-                                <rect x="200" y="55" width="26" height="90" rx="4" fill="#3b82f6" opacity=".6"/>
-                                <circle cx="222" cy="58" r="26" fill="none" stroke="#10b981" stroke-width="5"/>
-                                <line x1="241" y1="77" x2="262" y2="98" stroke="#10b981" stroke-width="7" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <div class="projeto-corpo">
-                            <div class="projeto-meta"><span class="status status-ok">em uso</span><span>2026</span></div>
-                            <h3>AuditDesk</h3>
-                            <p>Registro de chamados e auditoria da qualidade do atendimento com IA: relatórios, gráfico de temas e comparação de períodos, com dados anonimizados.</p>
-                            <ul class="tags"><li>JavaScript</li><li>IndexedDB</li><li>API Gemini</li></ul>
-                            <div class="projeto-links">
-                                <span class="aviso-privado">🔒 Projeto interno, código fechado</span>
-                            </div>
-                        </div>
-                    </article>
 
                     <!-- Potira -->
-                    <article class="projeto">
+                    <article class="projeto" data-cat="saude">
                         <div class="projeto-capa capa-teal" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="105" y="22" width="110" height="136" rx="10" class="s-celular"/>
@@ -312,7 +297,7 @@
                     </article>
 
                     <!-- Meusom -->
-                    <article class="projeto">
+                    <article class="projeto" data-cat="pessoal">
                         <div class="projeto-capa capa-indigo" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <path d="M40 90 Q70 40 100 90 T160 90 T220 90 T280 90" class="s-onda"/>
@@ -336,7 +321,7 @@
                     </article>
 
                     <!-- Diário da Cefaleia -->
-                    <article class="projeto">
+                    <article class="projeto" data-cat="saude">
                         <div class="projeto-capa capa-indigo" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="90" y="30" width="140" height="120" rx="10" class="s-celular"/>
@@ -354,12 +339,64 @@
                             </svg>
                         </div>
                         <div class="projeto-corpo">
-                            <div class="projeto-meta"><span class="status">em breve</span><span>2026</span></div>
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
                             <h3>Diário da Cefaleia</h3>
+                            <p class="projeto-problema"><strong>Para:</strong> CENDOR, Centro de Tratamento da Dor e Medicina Paliativa.</p>
                             <p>Acompanhamento de dores de cabeça para pacientes e profissionais de saúde: registro das crises, gatilhos e evolução ao longo do tempo.</p>
                             <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                             <div class="projeto-links">
-                                <span class="aviso-privado">🚧 Em pré-produção</span>
+                                <a href="https://rafajames.github.io/Diario-cefaleia-/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Testar ↗</a>
+                                <a href="https://github.com/Rafajames/Diario-cefaleia-" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Ouve -->
+                    <article class="projeto" data-cat="trabalho">
+                        <div class="projeto-capa capa-teal" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="60" y="40" width="200" height="100" rx="12" class="s-celular"/>
+                                <g stroke="#14b8a6" stroke-width="6" stroke-linecap="round">
+                                    <path d="M92 90v0M110 78v24M128 66v48M146 82v16M164 58v64M182 74v32M200 86v8M218 70v40M236 84v12"/>
+                                </g>
+                                <rect x="80" y="122" width="90" height="6" rx="3" class="s-trilho"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
+                            <h3>Ouve</h3>
+                            <p class="projeto-problema"><strong>Problema:</strong> registrar tudo o que foi dito em reuniões e audiências.</p>
+                            <p>Captura o áudio de uma fonte escolhida, transcreve e gera relatórios organizados. Versão web e app desktop para Windows.</p>
+                            <ul class="tags"><li>JavaScript</li><li>Electron</li><li>IA</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/Ouve/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Testar ↗</a>
+                                <a href="https://github.com/Rafajames/Ouve" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Orquestração Ocupacional -->
+                    <article class="projeto" data-cat="saude">
+                        <div class="projeto-capa capa-ambar" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="60" y="34" width="200" height="112" rx="12" class="s-celular"/>
+                                <rect x="84" y="104" width="22" height="24" rx="4" fill="#f59e0b" opacity=".6"/>
+                                <rect x="116" y="84" width="22" height="44" rx="4" fill="#f59e0b" opacity=".8"/>
+                                <rect x="148" y="64" width="22" height="64" rx="4" fill="#f59e0b"/>
+                                <rect x="180" y="92" width="22" height="36" rx="4" fill="#f59e0b" opacity=".7"/>
+                                <path d="M84 70l32-14 32 8 32-18 32 10" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
+                            <h3>Orquestração Ocupacional</h3>
+                            <p class="projeto-problema"><strong>Problema:</strong> o terapeuta ocupacional só sabe da rotina do paciente pelo que ele lembra na consulta.</p>
+                            <p>Pacientes e responsáveis registram atividades e rotina; o terapeuta recebe tabelas, gráficos, indicadores e relatório em PDF.</p>
+                            <ul class="tags"><li>JavaScript</li><li>PDF</li><li>Gráficos</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/Orquestracao-Ocupacional/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Testar ↗</a>
+                                <a href="https://github.com/Rafajames/Orquestracao-Ocupacional" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
                             </div>
                         </div>
                     </article>
@@ -405,7 +442,7 @@
                         </div>
                     </article>
 
-                    <!-- Navinha -->
+                    <!-- Hangar Estelar -->
                     <article class="projeto">
                         <div class="projeto-capa capa-espaco" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
@@ -425,9 +462,9 @@
                         </div>
                         <div class="projeto-corpo">
                             <div class="projeto-meta"><span class="status status-ok">no ar</span><span>2026</span></div>
-                            <h3>Navinha</h3>
+                            <h3>Hangar Estelar</h3>
                             <p class="projeto-problema"><strong>Começo:</strong> um jogo de nave em Java Swing que só rodava no computador.</p>
-                            <p>Ganhou versão web instalável e jogável no celular, com controle por toque. Segue em evolução, com novas naves, poderes e fases.</p>
+                            <p>Antigo Navinha. Virou jogo web instalável, com controle por toque, mapa de fases e uma história estilo RPG num futuro muito distante.</p>
                             <ul class="tags"><li>JavaScript</li><li>PWA</li><li>Java</li></ul>
                             <div class="projeto-links">
                                 <a href="https://rafajames.github.io/Navinha/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Jogar ↗</a>
@@ -460,6 +497,50 @@
                             <div class="projeto-links">
                                 <a href="https://rafajames.github.io/Domino-passe-bate/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Jogar ↗</a>
                                 <a href="https://github.com/Rafajames/Domino-passe-bate" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ateliê -->
+                    <article class="projeto">
+                        <div class="projeto-capa capa-rosa" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="110" y="128" width="100" height="14" rx="4" class="s-trilho"/>
+                                <path d="M140 128c-8-30 4-52 20-70 16 18 28 40 20 70z" fill="#ec4899" opacity=".85"/>
+                                <path d="M160 58c-6 20-6 44 0 70" fill="none" stroke="#fff" stroke-width="2" opacity=".6"/>
+                                <path d="M222 46l18 18-46 46-22 4 4-22z" fill="#f59e0b"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
+                            <h3>Ateliê</h3>
+                            <p class="projeto-problema"><strong>Ideia:</strong> um jogo sobre criar com as mãos.</p>
+                            <p>Escultura e criação artesanal no computador ou no celular: modo livre para inventar obras e modo carreira, aprendendo com um mestre.</p>
+                            <ul class="tags"><li>JavaScript</li><li>Jogo web</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/atelie/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Jogar ↗</a>
+                                <a href="https://github.com/Rafajames/atelie" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- O Caminho das Dez Mil Artes -->
+                    <article class="projeto">
+                        <div class="projeto-capa capa-indigo" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <circle cx="160" cy="90" r="46" fill="none" stroke="#a855f7" stroke-width="3" opacity=".7"/>
+                                <path d="M160 44a23 23 0 0 1 0 46 23 23 0 0 0 0 46 46 46 0 0 1 0-92z" fill="#6366f1"/>
+                                <circle cx="160" cy="67" r="6" fill="#fff"/><circle cx="160" cy="113" r="6" fill="#6366f1"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em concepção</span><span>2026</span></div>
+                            <h3>O Caminho das Dez Mil Artes</h3>
+                            <p class="projeto-problema"><strong>Ideia:</strong> um jogo de jornada pelas artes.</p>
+                            <p>Projeto em fase de conceito: mundo, regras e progressão estão sendo definidos num documento mestre antes da primeira versão jogável.</p>
+                            <ul class="tags"><li>Game design</li></ul>
+                            <div class="projeto-links">
+                                <span class="aviso-privado">🚧 Em concepção</span>
                             </div>
                         </div>
                     </article>
@@ -508,9 +589,10 @@
                         <span class="ano">2026</span>
                         <div class="evento">
                             <h3>Ferramentas em produção</h3>
-                            <p>MapTec-TJRR e AuditDesk passam a apoiar o trabalho de campo. O ShapePuzzle ganha campeonatos e versão
-                                Android, o Seu Assistente ganha APK gerado automaticamente e o Navinha vira jogo web instalável.
-                                Nascem também o Potira, para profissionais de saúde, e o Meusom, de músicas calmas.</p>
+                            <p>O Ache Aqui TJRR passa a apoiar o trabalho de campo e o Ouve chega às reuniões e audiências. O ShapePuzzle
+                                ganha campeonatos e versão Android, o Seu Assistente ganha APK gerado automaticamente e o Navinha vira o
+                                Hangar Estelar. Nascem também o Potira, o Diário da Cefaleia e a Orquestração Ocupacional, para a saúde,
+                                o Meusom, de músicas calmas, e o jogo Ateliê.</p>
                         </div>
                     </li>
                 </ol>
@@ -625,6 +707,130 @@
             const texto = `Olá, Jamerson! Me chamo ${nome.value.trim()}. ${mensagem.value.trim()}`;
             window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`, '_blank');
         });
+
+        /* Lucian UX/UI Prompt #245 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#245
+           Nome decodifica ao abrir e de novo ao passar o mouse. */
+        const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        (function () {
+            const h = document.getElementById('nome'), texto = h.textContent.trim();
+            const GLYPH = '!<>-_/[]{}=+~^?#%&@$01', dur = 1100;
+            let raf = 0, cells = [], running = false;
+            h.setAttribute('aria-label', texto);
+            h.textContent = '';
+            texto.split(' ').forEach((word, wi) => {
+                if (wi) h.appendChild(document.createTextNode(' '));
+                const w = document.createElement('span');
+                w.className = 'u245-w';
+                w.setAttribute('aria-hidden', 'true');
+                Array.from(word).forEach(ch => {
+                    const c = document.createElement('span'), b = document.createElement('b'), g = document.createElement('i');
+                    c.className = 'u245-c'; b.textContent = ch;
+                    c.append(b, g); w.appendChild(c);
+                    cells.push({ el: c, g });
+                });
+                h.appendChild(w);
+            });
+            function run() {
+                if (semMovimento) return;
+                cancelAnimationFrame(raf);
+                const n = cells.length, t0 = performance.now();
+                cells.forEach((c, i) => {
+                    c.a = Math.random() * dur * 0.3;
+                    c.r = dur * (0.32 + 0.68 * i / Math.max(1, n - 1)) + Math.random() * 90;
+                    c.n = 0; c.done = false; c.el.className = 'u245-c z';
+                });
+                running = true;
+                (function f(now) {
+                    const t = now - t0; let left = 0;
+                    cells.forEach(c => {
+                        if (c.done) return;
+                        if (t >= c.r) {
+                            c.done = true; c.el.className = 'u245-c f';
+                            setTimeout(() => c.el.classList.remove('f'), 40);
+                            return;
+                        }
+                        left++;
+                        if (t >= c.a) {
+                            if (c.el.classList.contains('z')) c.el.className = 'u245-c s';
+                            if (now - c.n > 55) { c.n = now; c.g.textContent = GLYPH.charAt(Math.random() * GLYPH.length | 0); }
+                        }
+                    });
+                    if (left) { raf = requestAnimationFrame(f); return; }
+                    running = false;
+                })(t0);
+            }
+            h.addEventListener('pointerenter', () => { if (!running) run(); });
+            run();
+        })();
+
+        // ---------- Contadores (contam os cards da página) ----------
+        const totais = {
+            sistemas: document.querySelectorAll('#lista-projetos .projeto').length,
+            jogos: document.querySelectorAll('.jogos .projeto').length
+        };
+        const numeros = [...document.querySelectorAll('.numeros b')];
+        numeros.forEach(b => { b.dataset.alvo = b.dataset.alvo || totais[b.dataset.conta]; });
+        function contar(b) {
+            const alvo = +b.dataset.alvo, t0 = performance.now(), d = 900;
+            if (semMovimento) { b.textContent = alvo; return; }
+            (function f(now) {
+                const p = Math.min(1, (now - t0) / d);
+                b.textContent = Math.round(alvo * (1 - Math.pow(1 - p, 3)));
+                if (p < 1) requestAnimationFrame(f);
+            })(t0);
+        }
+        numeros.forEach(contar);
+
+        /* Lucian UX/UI Prompt #271 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#271
+           Filtro de projetos com pílula deslizante. */
+        (function () {
+            const cs = document.querySelector('.u271-cs'), pl = cs.querySelector('.u271-pl');
+            const cards = [...document.querySelectorAll('#lista-projetos .projeto')];
+            const CH = [['todos', 'Todos'], ['trabalho', 'Trabalho'], ['saude', 'Saúde'], ['pessoal', 'Pessoais']];
+            let cur = -1;
+            const B = CH.map(([id, nome], i) => {
+                const b = document.createElement('button');
+                b.type = 'button'; b.className = 'u271-ch'; b.setAttribute('role', 'radio');
+                const n = i ? cards.filter(c => c.dataset.cat === id).length : cards.length;
+                b.innerHTML = '<span></span><i>' + n + '</i>'; b.firstChild.textContent = nome;
+                b.addEventListener('click', () => pick(i));
+                b.addEventListener('keydown', e => {
+                    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+                    if (d) { e.preventDefault(); const k = (i + d + CH.length) % CH.length; pick(k); B[k].focus(); }
+                });
+                cs.appendChild(b); return b;
+            });
+            function pill() {
+                const b = B[cur];
+                pl.style.width = b.offsetWidth + 'px';
+                pl.style.transform = 'translateX(' + b.offsetLeft + 'px)';
+            }
+            function pick(i) {
+                if (i === cur) return;
+                cur = i;
+                B.forEach((b, k) => { b.classList.toggle('is-on', k === i); b.setAttribute('aria-checked', k === i); b.tabIndex = k === i ? 0 : -1; });
+                pill();
+                cards.forEach(c => c.classList.toggle('is-off', i > 0 && c.dataset.cat !== CH[i][0]));
+            }
+            pick(0);
+            window.addEventListener('resize', pill);
+            document.fonts && document.fonts.ready.then(pill);
+        })();
+
+        /* Lucian UX/UI Prompt #251 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#251
+           Cards e títulos surgem ao rolar, em sequência. */
+        (function () {
+            const R = [...document.querySelectorAll('.projeto, .linha-tempo li, .secao-cabecalho')];
+            document.querySelectorAll('.projetos').forEach(g =>
+                [...g.children].forEach((c, i) => c.style.setProperty('--d', (i % 3) * 0.09 + 's')));
+            R.forEach(el => { if (!el.classList.contains('secao-cabecalho')) el.classList.add('rv'); });
+            if (semMovimento || !('IntersectionObserver' in window)) { R.forEach(el => el.classList.add('is-in')); return; }
+            const io = new IntersectionObserver(es => es.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('is-in');
+                else if (e.boundingClientRect.top > e.rootBounds.bottom - 1) e.target.classList.remove('is-in');
+            }), { threshold: 0.12 });
+            R.forEach(el => io.observe(el));
+        })();
     </script>
 
 </body>
