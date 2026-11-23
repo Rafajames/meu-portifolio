@@ -42,3 +42,13 @@
     .u271-pl, .js .rv, .js .secao-cabecalho h2::after { transition: none; }
     .js .rv { opacity: 1; transform: none; }
 }
+
+/* ---------- Ajustes de interface (crítica de design) ---------- */
+.u271-ch { min-height: 44px; }
+@media (max-width: 640px) {
+    .inicio-foto { width: min(46%, 150px); margin-inline: 0; }
+    .u271-cs { margin-bottom: 1.5rem; }
+}
+@media (min-width: 900px) {
+    .projetos.jogos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

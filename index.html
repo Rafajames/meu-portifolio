@@ -280,7 +280,7 @@
                             </svg>
                         </div>
                         <div class="projeto-corpo">
-                            <div class="projeto-meta"><span class="status">em testes</span><span>2026</span></div>
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
                             <h3>Potira</h3>
                             <p class="projeto-problema"><strong>Problema:</strong> relatórios clínicos feitos à mão tomam o tempo que seria do paciente.</p>
                             <p>Plataforma para profissionais de saúde registrarem sessões, gerenciarem pacientes e gerarem relatórios em Word e PDF, com gravação e transcrição por voz. A IA é opcional.</p>
@@ -749,8 +749,7 @@
             const B = CH.map(([id, nome], i) => {
                 const b = document.createElement('button');
                 b.type = 'button'; b.className = 'u271-ch'; b.setAttribute('role', 'radio');
-                const n = i ? cards.filter(c => c.dataset.cat === id).length : cards.length;
-                b.innerHTML = '<span></span><i>' + n + '</i>'; b.firstChild.textContent = nome;
+                b.innerHTML = '<span></span>'; b.firstChild.textContent = nome;
                 b.addEventListener('click', () => pick(i));
                 b.addEventListener('keydown', e => {
                     const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
@@ -776,7 +775,7 @@
         })();
 
         /* Lucian UX/UI Prompt #251 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#251
-           Cards e títulos surgem ao rolar, em sequência. */
+           Cards e títulos surgem ao rolar, em sequência (uma única vez, para o conteúdo nunca sumir). */
         (function () {
             const R = [...document.querySelectorAll('.projeto, .linha-tempo li, .secao-cabecalho')];
             document.querySelectorAll('.projetos').forEach(g =>
@@ -784,8 +783,7 @@
             R.forEach(el => { if (!el.classList.contains('secao-cabecalho')) el.classList.add('rv'); });
             if (semMovimento || !('IntersectionObserver' in window)) { R.forEach(el => el.classList.add('is-in')); return; }
             const io = new IntersectionObserver(es => es.forEach(e => {
-                if (e.isIntersecting) e.target.classList.add('is-in');
-                else if (e.boundingClientRect.top > e.rootBounds.bottom - 1) e.target.classList.remove('is-in');
+                if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
             }), { threshold: 0.12 });
             R.forEach(el => io.observe(el));
         })();
