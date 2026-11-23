@@ -59,12 +59,12 @@
         <section id="inicio" class="inicio">
             <div class="container inicio-grade">
                 <div class="inicio-texto">
-                    <p class="etiqueta"><span class="ponto-status" aria-hidden="true"></span> Aberto a novas conexões</p>
-                    <h1 class="u245-h" id="nome">Jamerson Rafael</h1>
+                    <p class="etiqueta"><span class="ponto-status" aria-hidden="true"></span> Aberto a vagas de desenvolvedor web</p>
+                    <h1 class="u245-h" id="titulo-nome">Jamerson Rafael</h1>
                     <p class="inicio-cargo"><span class="prompt">$</span> Analista de Field Service <span class="sep">&amp;</span> Desenvolvedor web<span class="cursor" aria-hidden="true">▍</span></p>
                     <p class="inicio-resumo">
-                        Atuo no suporte de TI do Tribunal de Justiça de Roraima e desenvolvo as ferramentas que faltavam
-                        no dia a dia: sistemas web simples, que funcionam no celular e até sem internet.
+                        Transformo problemas repetidos do suporte de TI em ferramentas que as pessoas usam sem manual.
+                        Atuo no Tribunal de Justiça de Roraima e desenvolvo para a web, no celular ou no computador.
                     </p>
                     <div class="acoes">
                         <a href="#projetos" class="botao botao-primario">Ver projetos</a>
@@ -121,6 +121,17 @@
                                 <p>Cada projeto começa numa dor do trabalho e melhora com o retorno de quem usa.</p>
                             </li>
                         </ul>
+
+                        <div class="metodo">
+                            <h3>Como eu trabalho</h3>
+                            <ol>
+                                <li><b>Ouço</b> quem vai usar, no próprio local de trabalho.</li>
+                                <li><b>Monto</b> um protótipo rápido e simples.</li>
+                                <li><b>Testo no campo</b> com quem usa de verdade.</li>
+                                <li><b>Ajusto</b> até não precisar de manual.</li>
+                            </ol>
+                            <p>Uso ferramentas de IA para programar mais rápido. O meu papel é decidir o que construir, testar com quem usa, corrigir e responder pelo resultado.</p>
+                        </div>
                     </div>
 
                     <aside class="sobre-lateral">
@@ -143,16 +154,12 @@
                             <h3 class="habilidades-titulo">Habilidades</h3>
                             <dl>
                                 <div>
-                                    <dt>Front-end</dt>
-                                    <dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>PWA</li><li>Ionic</li></ul></dd>
+                                    <dt>No dia a dia</dt>
+                                    <dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PWA</li><li>Supabase</li><li>Firebase</li><li>Git</li><li>GitHub Pages</li><li>GitHub Actions</li></ul></dd>
                                 </div>
                                 <div>
-                                    <dt>Back-end e dados</dt>
-                                    <dd><ul class="tags"><li>Java</li><li>Spring Boot</li><li>Python</li><li>Flask</li><li>SQLite</li><li>Firebase</li><li>Supabase</li><li>IndexedDB</li></ul></dd>
-                                </div>
-                                <div>
-                                    <dt>Ferramentas</dt>
-                                    <dd><ul class="tags"><li>Git</li><li>GitHub Actions</li><li>GitHub Pages</li><li>Android (APK)</li><li>API Gemini</li></ul></dd>
+                                    <dt>Já usei em projetos</dt>
+                                    <dd><ul class="tags"><li>Java</li><li>Spring Boot</li><li>TypeScript</li><li>Ionic</li><li>Python</li><li>Flask</li><li>SQLite</li><li>IndexedDB</li><li>Android (APK)</li><li>API Gemini</li></ul></dd>
                                 </div>
                                 <div>
                                     <dt>Suporte de TI</dt>
@@ -174,11 +181,11 @@
                     <p class="secao-intro">Ferramentas que uso no trabalho e projetos pessoais que viraram produto.</p>
                 </header>
 
-                <div class="u271-cs" role="radiogroup" aria-label="Filtrar projetos"><span class="u271-pl" aria-hidden="true"></span></div>
-                <div class="projetos" id="lista-projetos">
+                <p class="sub-rotulo">// em destaque</p>
+                <div class="projetos destaques">
 
                     <!-- Ache Aqui TJRR -->
-                    <article class="projeto projeto-destaque" data-cat="trabalho">
+                    <article class="projeto" data-cat="trabalho">
                         <div class="projeto-capa capa-azul" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="40" y="30" width="110" height="120" rx="8" class="s-linha"/>
@@ -197,8 +204,11 @@
                         <div class="projeto-corpo">
                             <div class="projeto-meta"><span class="status status-ok">em uso</span><span>2026</span></div>
                             <h3>Ache Aqui TJRR</h3>
-                            <p class="projeto-problema"><strong>Problema:</strong> encontrar a sala certa em cinco prédios grandes do tribunal.</p>
-                            <p>Antigo MapTec. Guia de salas para técnicos de campo, com fotos e endereços dos prédios, busca, navegação por andar e bloco e área de administração com login Google.</p>
+                            <dl class="caso">
+                                <div><dt>Problema</dt><dd>Encontrar a sala certa nos prédios grandes do tribunal, no meio de um atendimento.</dd></div>
+                                <div><dt>O que decidi</dt><dd>Qualquer técnico consulta sem cadastro; só administradores editam, com login Google.</dd></div>
+                                <div><dt>Hoje</dt><dd>Em uso no trabalho de campo, com fotos, endereços e busca por andar e bloco.</dd></div>
+                            </dl>
                             <ul class="tags"><li>JavaScript</li><li>Supabase</li><li>Google Login</li></ul>
                             <div class="projeto-links">
                                 <a href="https://rafajames.github.io/MapTec-TJRR/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Ver online ↗</a>
@@ -207,8 +217,74 @@
                         </div>
                     </article>
 
+                    <!-- Ouve -->
+                    <article class="projeto" data-cat="trabalho">
+                        <div class="projeto-capa capa-teal" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="60" y="40" width="200" height="100" rx="12" class="s-celular"/>
+                                <g stroke="#14b8a6" stroke-width="6" stroke-linecap="round">
+                                    <path d="M92 90v0M110 78v24M128 66v48M146 82v16M164 58v64M182 74v32M200 86v8M218 70v40M236 84v12"/>
+                                </g>
+                                <rect x="80" y="122" width="90" height="6" rx="3" class="s-trilho"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
+                            <h3>Ouve</h3>
+                            <dl class="caso">
+                                <div><dt>Problema</dt><dd>Registrar à mão o que foi dito em reuniões e audiências toma tempo.</dd></div>
+                                <div><dt>O que decidi</dt><dd>Começar pelo Windows, com tela compacta e simples para quem não é de tecnologia. A versão web serve para testar rápido.</dd></div>
+                                <div><dt>Hoje</dt><dd>Em teste, pensado para 10 a 20 relatórios por dia.</dd></div>
+                            </dl>
+                            <ul class="tags"><li>JavaScript</li><li>Electron</li><li>IA</li></ul>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/Ouve/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Testar ↗</a>
+                                <a href="https://github.com/Rafajames/Ouve" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Potira -->
+                    <article class="projeto" data-cat="saude">
+                        <div class="projeto-capa capa-teal" aria-hidden="true">
+                            <svg viewBox="0 0 320 180">
+                                <rect x="105" y="22" width="110" height="136" rx="10" class="s-celular"/>
+                                <rect x="119" y="38" width="48" height="7" rx="3.5" class="s-trilho"/>
+                                <rect x="119" y="56" width="82" height="6" rx="3" class="s-trilho"/>
+                                <rect x="119" y="70" width="82" height="6" rx="3" class="s-trilho"/>
+                                <rect x="119" y="84" width="58" height="6" rx="3" class="s-trilho"/>
+                                <circle cx="160" cy="128" r="9" fill="#14b8a6"/>
+                                <circle cx="160" cy="112" r="7" fill="#14b8a6" opacity=".55"/>
+                                <circle cx="146" cy="122" r="7" fill="#14b8a6" opacity=".55"/>
+                                <circle cx="174" cy="122" r="7" fill="#14b8a6" opacity=".55"/>
+                                <circle cx="160" cy="138" r="7" fill="#14b8a6" opacity=".55"/>
+                            </svg>
+                        </div>
+                        <div class="projeto-corpo">
+                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
+                            <h3>Potira</h3>
+                            <dl class="caso">
+                                <div><dt>Problema</dt><dd>Relatórios clínicos feitos à mão tomam o tempo que seria do paciente.</dd></div>
+                                <div><dt>O que decidi</dt><dd>IA só como opção, que cada profissional conecta por conta própria. Perfis separados para profissional, clínica e paciente.</dd></div>
+                                <div><dt>Hoje</dt><dd>Em teste com profissionais convidados.</dd></div>
+                            </dl>
+                            <ul class="tags"><li>JavaScript</li><li>Supabase</li><li>Web Speech API</li></ul>
+                                                        <p class="selo-dados">🔒 Termo de consentimento LGPD e acesso por perfil</p>
+                            <div class="projeto-links">
+                                <a href="https://rafajames.github.io/florescer-relatorios/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Ver online ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="sub-rotulo sub-outros">// outros projetos</p>
+                <div class="u271-cs" role="radiogroup" aria-label="Filtrar projetos"><span class="u271-pl" aria-hidden="true"></span></div>
+                <div class="projetos" id="lista-projetos">
+
+
                     <!-- Minha Carteira -->
-                    <article class="projeto projeto-destaque" data-cat="pessoal">
+                    <article class="projeto" data-cat="pessoal">
                         <div class="projeto-capa capa-verde" aria-hidden="true">
                             <svg viewBox="0 0 320 180">
                                 <rect x="70" y="40" width="150" height="100" rx="14" class="s-celular"/>
@@ -263,33 +339,6 @@
                     </article>
 
 
-                    <!-- Potira -->
-                    <article class="projeto" data-cat="saude">
-                        <div class="projeto-capa capa-teal" aria-hidden="true">
-                            <svg viewBox="0 0 320 180">
-                                <rect x="105" y="22" width="110" height="136" rx="10" class="s-celular"/>
-                                <rect x="119" y="38" width="48" height="7" rx="3.5" class="s-trilho"/>
-                                <rect x="119" y="56" width="82" height="6" rx="3" class="s-trilho"/>
-                                <rect x="119" y="70" width="82" height="6" rx="3" class="s-trilho"/>
-                                <rect x="119" y="84" width="58" height="6" rx="3" class="s-trilho"/>
-                                <circle cx="160" cy="128" r="9" fill="#14b8a6"/>
-                                <circle cx="160" cy="112" r="7" fill="#14b8a6" opacity=".55"/>
-                                <circle cx="146" cy="122" r="7" fill="#14b8a6" opacity=".55"/>
-                                <circle cx="174" cy="122" r="7" fill="#14b8a6" opacity=".55"/>
-                                <circle cx="160" cy="138" r="7" fill="#14b8a6" opacity=".55"/>
-                            </svg>
-                        </div>
-                        <div class="projeto-corpo">
-                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
-                            <h3>Potira</h3>
-                            <p class="projeto-problema"><strong>Problema:</strong> relatórios clínicos feitos à mão tomam o tempo que seria do paciente.</p>
-                            <p>Plataforma para profissionais de saúde registrarem sessões, gerenciarem pacientes e gerarem relatórios em Word e PDF, com gravação e transcrição por voz. A IA é opcional.</p>
-                            <ul class="tags"><li>JavaScript</li><li>Supabase</li><li>Web Speech API</li></ul>
-                            <div class="projeto-links">
-                                <a href="https://rafajames.github.io/florescer-relatorios/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Ver online ↗</a>
-                            </div>
-                        </div>
-                    </article>
 
                     <!-- Meusom -->
                     <article class="projeto" data-cat="pessoal">
@@ -347,29 +396,6 @@
                     </article>
 
 
-                    <!-- Ouve -->
-                    <article class="projeto" data-cat="trabalho">
-                        <div class="projeto-capa capa-teal" aria-hidden="true">
-                            <svg viewBox="0 0 320 180">
-                                <rect x="60" y="40" width="200" height="100" rx="12" class="s-celular"/>
-                                <g stroke="#14b8a6" stroke-width="6" stroke-linecap="round">
-                                    <path d="M92 90v0M110 78v24M128 66v48M146 82v16M164 58v64M182 74v32M200 86v8M218 70v40M236 84v12"/>
-                                </g>
-                                <rect x="80" y="122" width="90" height="6" rx="3" class="s-trilho"/>
-                            </svg>
-                        </div>
-                        <div class="projeto-corpo">
-                            <div class="projeto-meta"><span class="status">em teste</span><span>2026</span></div>
-                            <h3>Ouve</h3>
-                            <p class="projeto-problema"><strong>Problema:</strong> registrar tudo o que foi dito em reuniões e audiências.</p>
-                            <p>Captura o áudio de uma fonte escolhida, transcreve e gera relatórios organizados. Versão web e app desktop para Windows.</p>
-                            <ul class="tags"><li>JavaScript</li><li>Electron</li><li>IA</li></ul>
-                            <div class="projeto-links">
-                                <a href="https://rafajames.github.io/Ouve/" target="_blank" rel="noopener" class="botao botao-primario botao-p">Testar ↗</a>
-                                <a href="https://github.com/Rafajames/Ouve" target="_blank" rel="noopener" class="botao botao-secundario botao-p">Código</a>
-                            </div>
-                        </div>
-                    </article>
 
                     <!-- Orquestração Ocupacional -->
                     <article class="projeto" data-cat="saude">
@@ -580,12 +606,18 @@
                 <div class="contato-texto">
                     <p class="secao-rotulo">// contato</p>
                     <h2>Vamos conversar?</h2>
-                    <p>Tem um projeto, uma vaga ou uma ideia? Escreva aqui e a mensagem chega direto no meu WhatsApp.</p>
+                    <p>Tem um projeto, uma vaga ou uma ideia? Escreva aqui ou direto para <a href="mailto:jamersonrafael.sv@gmail.com">jamersonrafael.sv@gmail.com</a>.</p>
                     <ul class="canais">
+                        <li>
+                            <a href="mailto:jamersonrafael.sv@gmail.com">
+                                <img src="./img/email.svg" alt="" class="canal-icone icone-mono">
+                                <span><strong>E-mail</strong><small>jamersonrafael.sv@gmail.com</small></span>
+                            </a>
+                        </li>
                         <li>
                             <a href="https://www.linkedin.com/in/jamerson-rafael-a7a480249/" target="_blank" rel="noopener">
                                 <img src="./img/linkedin.svg" alt="" class="canal-icone">
-                                <span><strong>LinkedIn</strong><small>jamerson-rafael</small></span>
+                                <span><strong>LinkedIn</strong><small>currículo e experiência</small></span>
                             </a>
                         </li>
                         <li>
@@ -608,8 +640,8 @@
                         <textarea id="mensagem" rows="5" placeholder="Conte o que você precisa" required></textarea>
                         <p class="erro" id="erro-mensagem" hidden>Escreva uma mensagem.</p>
                     </div>
-                    <button type="submit" class="botao botao-primario botao-largo">Enviar pelo WhatsApp</button>
-                    <p class="formulario-nota">Abre o WhatsApp com a mensagem pronta. Você revisa antes de enviar.</p>
+                    <button type="submit" class="botao botao-primario botao-largo">Enviar por e-mail</button>
+                    <p class="formulario-nota">Abre o seu aplicativo de e-mail com a mensagem pronta. Você revisa antes de enviar.</p>
                 </form>
             </div>
         </section>
@@ -619,7 +651,7 @@
     <footer class="rodape">
         <div class="container rodape-interno">
             <p>© <span id="ano">2026</span> Jamerson Rafael</p>
-            <p class="rodape-feito">feito com HTML, CSS e JavaScript puro</p>
+            <p class="rodape-feito">feito com HTML, CSS e JavaScript puro, com ajuda de IA</p>
             <a href="#inicio" class="voltar-topo">voltar ao topo ↑</a>
         </div>
     </footer>
@@ -664,8 +696,8 @@
             document.querySelectorAll('main section[id]').forEach(s => observador.observe(s));
         }
 
-        // ---------- Formulário → WhatsApp ----------
-        const telefone = '5583987392336';
+        // ---------- Formulário → e-mail ----------
+        const email = 'jamersonrafael.sv@gmail.com';
         document.getElementById('formulario').addEventListener('submit', event => {
             event.preventDefault();
             const nome = document.getElementById('nome');
@@ -679,15 +711,15 @@
             });
             if (!valido) return;
 
-            const texto = `Olá, Jamerson! Me chamo ${nome.value.trim()}. ${mensagem.value.trim()}`;
-            window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`, '_blank');
+            const corpo = `Olá, Jamerson! Me chamo ${nome.value.trim()}.\n\n${mensagem.value.trim()}`;
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent('Contato pelo portfólio')}&body=${encodeURIComponent(corpo)}`;
         });
 
         /* Lucian UX/UI Prompt #245 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#245
            Nome decodifica ao abrir e de novo ao passar o mouse. */
         const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         (function () {
-            const h = document.getElementById('nome'), texto = h.textContent.trim();
+            const h = document.getElementById("titulo-nome"), texto = h.textContent.trim();
             const GLYPH = '!<>-_/[]{}=+~^?#%&@$01', dur = 1100;
             let raf = 0, cells = [], running = false;
             h.setAttribute('aria-label', texto);
@@ -744,7 +776,7 @@
         (function () {
             const cs = document.querySelector('.u271-cs'), pl = cs.querySelector('.u271-pl');
             const cards = [...document.querySelectorAll('#lista-projetos .projeto')];
-            const CH = [['todos', 'Todos'], ['trabalho', 'Trabalho'], ['saude', 'Saúde'], ['pessoal', 'Pessoais']];
+            const CH = [['todos', 'Todos'], ['saude', 'Saúde'], ['pessoal', 'Pessoais']];
             let cur = -1;
             const B = CH.map(([id, nome], i) => {
                 const b = document.createElement('button');

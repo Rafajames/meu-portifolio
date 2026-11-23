@@ -24,7 +24,7 @@ Este portfólio foi desenvolvido com foco em:
 * Interface que se adapta ao tema do dispositivo
 * Seções organizadas para navegação rápida
 * Destaque para habilidades e projetos
-* Formulário de contato que abre conversa no WhatsApp (sem custo)
+* Formulário de contato que abre o app de e-mail (sem custo)
 
 ---
 
@@ -35,7 +35,7 @@ Este portfólio foi desenvolvido com foco em:
 * **Projetos**: Ache Aqui TJRR, Ouve, Minha Carteira, Seu Assistente, Potira, Meusom, Diário da Cefaleia e Orquestração Ocupacional, com filtro por área
 * **Jogos**: ShapePuzzle, Hangar Estelar, Passe & Bate e Ateliê
 * **Trajetória**: linha do tempo
-* **Contato**: formulário que abre o WhatsApp
+* **Contato**: e-mail e formulário que abre o app de e-mail
 * **Footer**: redes sociais e créditos
 
 ---
