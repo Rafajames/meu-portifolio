@@ -66,11 +66,6 @@
                         Atuo no suporte de TI do Tribunal de Justiça de Roraima e desenvolvo as ferramentas que faltavam
                         no dia a dia: sistemas web simples, que funcionam no celular e até sem internet.
                     </p>
-                    <ul class="numeros" aria-label="Em números">
-                        <li><b data-conta="sistemas">0</b>sistemas</li>
-                        <li><b data-conta="jogos">0</b>jogos</li>
-                        <li><b data-alvo="5">0</b>prédios mapeados</li>
-                    </ul>
                     <div class="acoes">
                         <a href="#projetos" class="botao botao-primario">Ver projetos</a>
                         <a href="#contato" class="botao botao-secundario">Falar comigo</a>
@@ -524,26 +519,6 @@
                         </div>
                     </article>
 
-                    <!-- O Caminho das Dez Mil Artes -->
-                    <article class="projeto">
-                        <div class="projeto-capa capa-indigo" aria-hidden="true">
-                            <svg viewBox="0 0 320 180">
-                                <circle cx="160" cy="90" r="46" fill="none" stroke="#a855f7" stroke-width="3" opacity=".7"/>
-                                <path d="M160 44a23 23 0 0 1 0 46 23 23 0 0 0 0 46 46 46 0 0 1 0-92z" fill="#6366f1"/>
-                                <circle cx="160" cy="67" r="6" fill="#fff"/><circle cx="160" cy="113" r="6" fill="#6366f1"/>
-                            </svg>
-                        </div>
-                        <div class="projeto-corpo">
-                            <div class="projeto-meta"><span class="status">em concepção</span><span>2026</span></div>
-                            <h3>O Caminho das Dez Mil Artes</h3>
-                            <p class="projeto-problema"><strong>Ideia:</strong> um jogo de jornada pelas artes.</p>
-                            <p>Projeto em fase de conceito: mundo, regras e progressão estão sendo definidos num documento mestre antes da primeira versão jogável.</p>
-                            <ul class="tags"><li>Game design</li></ul>
-                            <div class="projeto-links">
-                                <span class="aviso-privado">🚧 Em concepção</span>
-                            </div>
-                        </div>
-                    </article>
 
                 </div>
             </div>
@@ -763,23 +738,6 @@
             run();
         })();
 
-        // ---------- Contadores (contam os cards da página) ----------
-        const totais = {
-            sistemas: document.querySelectorAll('#lista-projetos .projeto').length,
-            jogos: document.querySelectorAll('.jogos .projeto').length
-        };
-        const numeros = [...document.querySelectorAll('.numeros b')];
-        numeros.forEach(b => { b.dataset.alvo = b.dataset.alvo || totais[b.dataset.conta]; });
-        function contar(b) {
-            const alvo = +b.dataset.alvo, t0 = performance.now(), d = 900;
-            if (semMovimento) { b.textContent = alvo; return; }
-            (function f(now) {
-                const p = Math.min(1, (now - t0) / d);
-                b.textContent = Math.round(alvo * (1 - Math.pow(1 - p, 3)));
-                if (p < 1) requestAnimationFrame(f);
-            })(t0);
-        }
-        numeros.forEach(contar);
 
         /* Lucian UX/UI Prompt #271 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#271
            Filtro de projetos com pílula deslizante. */

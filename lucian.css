@@ -21,10 +21,6 @@
 .u245-c.s i { opacity: .9; }
 .u245-c.f b { color: var(--ux-accent); transition: none; }
 
-/* ---------- Contadores ---------- */
-.numeros { display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; margin: 1.4rem 0 1.8rem; padding: 0; list-style: none; font-family: var(--fonte-texto); color: var(--texto-suave); font-size: .92rem; }
-.numeros b { display: block; font-family: var(--fonte-mono); font-size: 1.6rem; color: var(--texto); font-variant-numeric: tabular-nums; }
-
 /* ---------- #271 Filtro com pílula deslizante ---------- */
 .u271-cs { position: relative; display: flex; gap: 2px; width: max-content; max-width: 100%; margin: 0 0 2rem; padding: 3px; border-radius: 999px; background: var(--ux-surface-2); box-shadow: inset 0 0 0 1px var(--ux-line); overflow-x: auto; scrollbar-width: none; }
 .u271-cs::-webkit-scrollbar { display: none; }

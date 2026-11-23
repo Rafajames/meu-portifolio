@@ -33,7 +33,7 @@ Este portfólio foi desenvolvido com foco em:
 * **Header**: apresentação e links sociais
 * **Sobre mim**: breve descrição profissional e habilidades
 * **Projetos**: Ache Aqui TJRR, Ouve, Minha Carteira, Seu Assistente, Potira, Meusom, Diário da Cefaleia e Orquestração Ocupacional, com filtro por área
-* **Jogos**: ShapePuzzle, Hangar Estelar, Passe & Bate, Ateliê e O Caminho das Dez Mil Artes
+* **Jogos**: ShapePuzzle, Hangar Estelar, Passe & Bate e Ateliê
 * **Trajetória**: linha do tempo
 * **Contato**: formulário que abre o WhatsApp
 * **Footer**: redes sociais e créditos
